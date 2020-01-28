@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cefeb241-5bd3-443a-babe-a6a63d1ca86d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/dgpunam/Adimnistrativo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dgpunam/Adimnistrativo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/dgpunam/UIMenu/UImenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dgpunam/Adimnistrativo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dgpunam/Adiministrativo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dgpunam/Ayudante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dgpunam/Ayudante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dgpunam/Investigador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dgpunam/Investigador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dgpunam/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dgpunam/Profesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dgpunam/Trabajador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dgpunam/Trabajador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +27,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1X2fKg2H26HaWXU7H0fPVDzJxbW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -63,7 +72,19 @@
       <option name="presentableId" value="Default" />
       <updated>1580249047915</updated>
     </task>
+    <task id="LOCAL-00001" summary="Este tiene completo los constructores de las clases principales">
+      <created>1580251782200</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580251782200</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Este tiene completo los constructores de las clases principales" />
+    <option name="LAST_COMMIT_MESSAGE" value="Este tiene completo los constructores de las clases principales" />
   </component>
   <component name="WindowStateProjectService">
     <state x="278" y="58" width="800" height="677" key="#Project_Structure" timestamp="1580249079421">
@@ -82,21 +103,21 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="289" y="27" width="777" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1580251781809" />
-    <state width="1320" height="175" key="GridCell.Tab.0.bottom" timestamp="1580249130459">
+    <state width="1320" height="560" key="GridCell.Tab.0.bottom" timestamp="1580253795394">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1580249130459" />
-    <state width="1320" height="175" key="GridCell.Tab.0.center" timestamp="1580249130459">
+    <state width="1320" height="560" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1580253795394" />
+    <state width="1320" height="560" key="GridCell.Tab.0.center" timestamp="1580253795394">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1580249130459" />
-    <state width="1320" height="175" key="GridCell.Tab.0.left" timestamp="1580249130458">
+    <state width="1320" height="560" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1580253795394" />
+    <state width="1320" height="560" key="GridCell.Tab.0.left" timestamp="1580253795393">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1580249130458" />
-    <state width="1320" height="175" key="GridCell.Tab.0.right" timestamp="1580249130459">
+    <state width="1320" height="560" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1580253795393" />
+    <state width="1320" height="560" key="GridCell.Tab.0.right" timestamp="1580253795394">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1580249130459" />
+    <state width="1320" height="560" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1580253795394" />
   </component>
 </project>

@@ -11,7 +11,7 @@ public abstract class Trabajador {
     private int sueldo;
     private int antiguedad;
 
-    public Trabajador(String nombre, String apellidoMaterno, String apellidoPaterno, String curp, String direccion, String correoElectronico, int matricula, int sueldo, int antiguedad) {
+    public Trabajador(String nombre, String apellidoPaterno, String apellidoMaterno, String curp, String direccion, String correoElectronico, int matricula, int sueldo, int antiguedad) {
         this.nombre = nombre;
         this.apellidoMaterno = apellidoMaterno;
         this.apellidoPaterno = apellidoPaterno;
@@ -113,11 +113,42 @@ public abstract class Trabajador {
             this.terminoMin = terminoMin;
 
         }
-        public String jornada(){
+        public String jornada() {
             int duration = this.terminoHoras - this.inicioHoras;
             int durationMin = this.terminoMin - this.inicioMin;
             return duration + ":" + durationMin;
         }
+    }
+
+    public void mostrarCheque(int matricula){
+        String msj = "\n" +
+                "+-----------------------------------------------------+----------------------------------+-------------------------+--------------+--+\n" +
+                "|                Datos del trabajador                 |            Impuestos             |         Jornad          | Salario+++++ |  |\n" +
+                "+-----------------------------------------------------+----------------------------------+-------------------------+--------------+--+\n" +
+                "| Nombre: "+nombre + apellidoPaterno + apellidoMaterno +"                                      | SITUMAN:                         | Horas labordas: +++++++ |              |  |\n" +
+                "| Dirección: " + direccion +"                                      | ISR:                             |                         |              |  |\n" +
+                "| Puesto:" +"                                      | Ahorro para el retiro:++++++++++ |                         |              |  |\n" +
+                "| Matricula:                                          |                                  |                         |              |  |\n" +
+                "| CURP:                                               |                                  |                         |              |  |\n" +
+                "| Antigüedad:                                         |                                  |                         |              |  |\n" +
+                "| e-mail:                                             |                                  |                         |              |  |\n" +
+                "+-----------------------------------------------------+----------------------------------+-------------------------+--------------+--+\n" +
+                "\n";
+        System.out.printf( msj +"\n" +
+                "\n" +
+                " __    __  __    __   ______   __       __ \n" +
+                "|  \\  |  \\|  \\  |  \\ /      \\ |  \\     /  \\\n" +
+                "| $$  | $$| $$\\ | $$|  $$$$$$\\| $$\\   /  $$\n" +
+                "| $$  | $$| $$$\\| $$| $$__| $$| $$$\\ /  $$$\n" +
+                "| $$  | $$| $$$$\\ $$| $$    $$| $$$$\\  $$$$\n" +
+                "| $$  | $$| $$\\$$ $$| $$$$$$$$| $$\\$$ $$ $$\n" +
+                "| $$__/ $$| $$ \\$$$$| $$  | $$| $$ \\$$$| $$\n" +
+                " \\$$    $$| $$  \\$$$| $$  | $$| $$  \\$ | $$\n" +
+                "  \\$$$$$$  \\$$   \\$$ \\$$   \\$$ \\$$      \\$$\n" +
+                "                                           \n" +
+                "                                           \n" +
+                "                                           \n" +
+                "\n");
     }
 }
 

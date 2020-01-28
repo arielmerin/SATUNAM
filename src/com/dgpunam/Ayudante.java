@@ -9,7 +9,7 @@ public class Ayudante extends Trabajador {
     private Horario horario;
 
 
-    public Ayudante(String nombre, String apellidoMaterno, String apellidoPaterno, String curp, String direccion,
+    public Ayudante(String nombre, String apellidoPaterno, String apellidoMaterno, String curp, String direccion,
                     String correoElectronico, int matricula, int sueldo, int antiguedad, String facultad, int creditos,
                     boolean estaTitulado, String clase, Horario horario) {
         super(nombre, apellidoMaterno, apellidoPaterno, curp, direccion, correoElectronico, matricula, sueldo, antiguedad);

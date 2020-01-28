@@ -6,7 +6,7 @@ public class Investigador extends Trabajador {
     private char nivelInv;
     private  int nivelSNI;
 
-    public Investigador(String nombre, String apellidoMaterno, String apellidoPaterno, String curp, String direccion, String correoElectronico, int matricula, int sueldo, int antiguedad, String facultad, char nivelInv, int nivelSNI) {
+    public Investigador(String nombre, String apellidoPaterno, String apellidoMaterno, String curp, String direccion, String correoElectronico, int matricula, int sueldo, int antiguedad, String facultad, char nivelInv, int nivelSNI) {
         super(nombre, apellidoMaterno, apellidoPaterno, curp, direccion, correoElectronico, matricula, sueldo, antiguedad);
         this.facultad = facultad;
         this.nivelInv = nivelInv;
