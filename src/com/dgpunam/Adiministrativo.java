@@ -6,6 +6,9 @@ public class Adiministrativo extends Trabajador {
     private String puesto;
     private Horario horario;
 
+    public Horario getHorario() {
+        return horario;
+    }
 
     public Adiministrativo(String nombre, String apellidoPaterno, String apellidoMaterno, String curp, String direccion,
                            String correoElectronico, int matricula, int sueldo, int antiguedad, String lugarTrabajo,

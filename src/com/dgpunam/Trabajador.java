@@ -113,28 +113,28 @@ public abstract class Trabajador {
             this.terminoMin = terminoMin;
 
         }
-        public String jornada() {
-            int duration = this.terminoHoras - this.inicioHoras;
-            int durationMin = this.terminoMin - this.inicioMin;
+        public static String jornada(Horario horario) {
+            int duration = horario.terminoHoras - horario.inicioHoras;
+            int durationMin = horario.terminoMin - horario.inicioMin;
             return duration + ":" + durationMin;
         }
     }
 
-    public void mostrarCheque(int matricula){
+    public void mostrarCheque(int matricula) {
         String msj = "\n" +
                 "+-----------------------------------------------------+----------------------------------+-------------------------+--------------+--+\n" +
-                "|                Datos del trabajador                 |            Impuestos             |         Jornad          | Salario+++++ |  |\n" +
+                "|                Datos del trabajador                 |            Impuestos             |         Jornada          | Salario+++++ |  |\n" +
                 "+-----------------------------------------------------+----------------------------------+-------------------------+--------------+--+\n" +
-                "| Nombre: "+nombre + apellidoPaterno + apellidoMaterno +"                                      | SITUMAN:                         | Horas labordas: +++++++ |              |  |\n" +
-                "| Dirección: " + direccion +"                                      | ISR:                             |                         |              |  |\n" +
-                "| Puesto:" +"                                      | Ahorro para el retiro:++++++++++ |                         |              |  |\n" +
+                "| Nombre: " + nombre + apellidoPaterno + apellidoMaterno + "                                      | SITUMAN:                         | Horas labordas: +++++++ |              |  |\n" +
+                "| Dirección: " + direccion + "                                      | ISR:                             |                         |              |  |\n" +
+                "| Puesto:" + "                                      | Ahorro para el retiro:++++++++++ |                         |              |  |\n" +
                 "| Matricula:                                          |                                  |                         |              |  |\n" +
                 "| CURP:                                               |                                  |                         |              |  |\n" +
                 "| Antigüedad:                                         |                                  |                         |              |  |\n" +
                 "| e-mail:                                             |                                  |                         |              |  |\n" +
                 "+-----------------------------------------------------+----------------------------------+-------------------------+--------------+--+\n" +
                 "\n";
-        System.out.printf( msj +"\n" +
+        System.out.printf(msj + "\n" +
                 "\n" +
                 " __    __  __    __   ______   __       __ \n" +
                 "|  \\  |  \\|  \\  |  \\ /      \\ |  \\     /  \\\n" +
@@ -149,6 +149,7 @@ public abstract class Trabajador {
                 "                                           \n" +
                 "                                           \n" +
                 "\n");
+
     }
 }
 
