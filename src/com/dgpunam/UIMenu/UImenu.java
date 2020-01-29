@@ -2,11 +2,14 @@ package com.dgpunam.UIMenu;
 
 import com.dgpunam.Adiministrativo;
 import com.dgpunam.Trabajador;
-import com.dgpunam.util.DgpUnamUtil;
+import static com.dgpunam.util.DgpUnamUtil.getInt;
+import static com.dgpunam.util.DgpUnamUtil.getStr;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class UImenu {
+    private ArrayList<Trabajador> trabajadores = new ArrayList();
     public static void uiMenu(){
         String label = "/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/\n" +
                 "\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\\n" +
@@ -26,11 +29,12 @@ public class UImenu {
             System.out.println(" [6] Modificar algún empleado \n");
             System.out.println(" [0] Salir \n");
 
-            int answer = DgpUnamUtil.getInt(" Seleccione la opción deseada: ", "Error, ingrese un valor válido");
+            int answer = getInt(" Seleccione la opción deseada: ", "Error, ingrese un valor válido");
 
             switch (answer){
                 case 1:
                     System.out.println(" :: ALTA DE EMPLEADOS ::");
+                    altaMenu();
                     break;
                 case 2:
                     System.out.println(" :: BAJA DE EMPLEADOS :: ");
@@ -58,5 +62,38 @@ public class UImenu {
 
 
     }
+    public static void altaMenu(){
 
+
+        boolean continuar = true;
+
+        do {
+            System.out.println("Ingrese una opción válida");
+            System.out.println("[1] Investigador");
+            System.out.println("[2] Profesor");
+            System.out.println("[2] Ayudante");
+            System.out.println("[3] Administrativo");
+            System.out.println("[0] Salir");
+
+            int respuesta = getInt("Ingrese la opción deseada: ", "Error, ingrese un número");
+            switch (respuesta){
+                case 1:
+                    String nombre = getStr("Ingrese el nombre del trabajador: ", "Error,ingrese algun nombre");
+                    System.out.println("Este es el nombre que le asignó: " + nombre);
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 0:
+                    System.out.println("Volviendo al menú principal...\n");
+                    continuar = false;
+
+            }
+
+
+        }while (continuar);
+    }
 }

@@ -3,6 +3,8 @@ package com.dgpunam.util;
 import java.util.Scanner;
 
 public class DgpUnamUtil {
+    static Scanner scan = new Scanner(System.in);
+
     /**
      * Este método sirve para controlar que en las entradas de enteros
      * lo único que se pueda ingresar sean justo sólo valores numéricos y nada de cadenas
@@ -16,7 +18,6 @@ public class DgpUnamUtil {
         String librearBuffer;
         boolean conti = true;
 
-        Scanner scan = new Scanner(System.in);
 
         do{
             System.out.println(msg);
@@ -30,5 +31,25 @@ public class DgpUnamUtil {
             }
         }while(conti);
         return entero;
+    }
+
+    public static String getStr(String messaje, String error){
+        System.out.println(messaje);
+        String cadena = scan.nextLine();
+        boolean conti = true;
+        String librearBuffer;
+
+        do{
+            System.out.println(messaje);
+            if(scan.hasNext())
+            {
+                cadena = scan.nextLine();
+                conti = false;
+            }else{
+                librearBuffer = scan.next();
+                System.out.println(error);
+            }
+        }while(conti);
+        return cadena.replaceAll("[\\d.]", "");
     }
 }
