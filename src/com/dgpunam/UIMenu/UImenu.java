@@ -78,7 +78,7 @@ public class UImenu {
             int respuesta = getInt("Ingrese la opción deseada: ", "Error, ingrese un número");
             switch (respuesta){
                 case 1:
-                    String nombre = getStr("Ingrese el nombre del trabajador: ", "Error,ingrese algun nombre");
+                    String nombre = getStr("Ingrese el nombre del trabajador: ");
                     System.out.println("Este es el nombre que le asignó: " + nombre);
                     break;
                 case 2:
