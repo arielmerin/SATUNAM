@@ -6,8 +6,11 @@ public class Investigador extends Trabajador {
     private char nivelInv;
     private  int nivelSNI;
 
-    public Investigador(String nombre, String apellidoPaterno, String apellidoMaterno, String curp, String direccion, String correoElectronico, int matricula, int sueldo, int antiguedad, String facultad, char nivelInv, int nivelSNI) {
-        super(nombre, apellidoMaterno, apellidoPaterno, curp, direccion, correoElectronico, matricula, sueldo, antiguedad);
+    public Investigador(String nombre, String apellidoPaterno, String apellidoMaterno, String curp, String direccion,
+                        String correoElectronico, int matricula, double sueldo, int diaContrat, int mes, int year,
+                        String facultad, char nivelInv, int nivelSNI) {
+        super(nombre, apellidoMaterno, apellidoPaterno, curp, direccion, correoElectronico, matricula, sueldo,
+                diaContrat, mes, year);
         this.facultad = facultad;
         this.nivelInv = nivelInv;
         this.nivelSNI = nivelSNI;
@@ -84,23 +87,13 @@ public class Investigador extends Trabajador {
     }
 
     @Override
-    public int getSueldo() {
+    public double getSueldo() {
         return super.getSueldo();
     }
 
     @Override
-    public void setSueldo(int sueldo) {
+    public void setSueldo(double sueldo) {
         super.setSueldo(sueldo);
-    }
-
-    @Override
-    public int getAntiguedad() {
-        return super.getAntiguedad();
-    }
-
-    @Override
-    public void setAntiguedad(int antiguedad) {
-        super.setAntiguedad(antiguedad);
     }
 
     @Override

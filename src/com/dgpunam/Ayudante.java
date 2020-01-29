@@ -10,9 +10,9 @@ public class Ayudante extends Trabajador {
 
 
     public Ayudante(String nombre, String apellidoPaterno, String apellidoMaterno, String curp, String direccion,
-                    String correoElectronico, int matricula, int sueldo, int antiguedad, String facultad, int creditos,
-                    boolean estaTitulado, String clase, Horario horario) {
-        super(nombre, apellidoMaterno, apellidoPaterno, curp, direccion, correoElectronico, matricula, sueldo, antiguedad);
+                    String correoElectronico, int matricula, double sueldo, int antiguedad, int dia, int mes, int year,
+                    String facultad, int creditos, boolean estaTitulado, String clase, Horario horario) {
+        super(nombre, apellidoMaterno, apellidoPaterno, curp, direccion, correoElectronico, matricula, sueldo, dia, mes, year);
         this.clase = clase;
         this.creditos =creditos;
         this.estaTitulado = estaTitulado;

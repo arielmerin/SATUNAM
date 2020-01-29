@@ -10,9 +10,10 @@ public class Profesor extends Trabajador {
 
 
     public Profesor(String nombre, String apellidoPaterno, String apellidoMaterno, String curp, String direccion,
-                    String correoElectronico, int matricula, int sueldo, int antiguedad, String facultad, String clase,
-                    Horario horario, char nivelProf, String titulo) {
-        super(nombre, apellidoMaterno, apellidoPaterno, curp, direccion, correoElectronico, matricula, sueldo, antiguedad);
+                    String correoElectronico, int matricula, double sueldo, int dia, int mes, int year,
+                    String facultad, String clase, Horario horario, char nivelProf, String titulo) {
+        super(nombre, apellidoMaterno, apellidoPaterno, curp, direccion, correoElectronico, matricula, sueldo, dia,
+                mes, year);
         this.clase = clase;
         this.facultad = facultad;
         this.horario = horario;

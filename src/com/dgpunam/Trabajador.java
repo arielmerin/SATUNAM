@@ -1,5 +1,15 @@
 package com.dgpunam;
 
+import javax.swing.text.DateFormatter;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.chrono.ChronoPeriod;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 public abstract class Trabajador {
     private String nombre;
     private String apellidoMaterno;
@@ -8,10 +18,12 @@ public abstract class Trabajador {
     private String direccion;
     private String correoElectronico;
     private int matricula;
-    private int sueldo;
-    private int antiguedad;
+    private double sueldo;
+    private String fechaContrato;
 
-    public Trabajador(String nombre, String apellidoPaterno, String apellidoMaterno, String curp, String direccion, String correoElectronico, int matricula, int sueldo, int antiguedad) {
+    public Trabajador(String nombre, String apellidoPaterno, String apellidoMaterno, String curp,
+                      String direccion, String correoElectronico, int matricula, double sueldo, int diaContrat,
+                      int mes, int year) {
         this.nombre = nombre;
         this.apellidoMaterno = apellidoMaterno;
         this.apellidoPaterno = apellidoPaterno;
@@ -20,7 +32,10 @@ public abstract class Trabajador {
         this.correoElectronico = correoElectronico;
         this.matricula = matricula;
         this.sueldo = sueldo;
-        this.antiguedad = antiguedad;
+        GregorianCalendar calendar = new GregorianCalendar(year, mes-1, diaContrat);
+        SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        fechaContrato = df.format(calendar.getTime());
+
     }
 
     public String getNombre() {
@@ -79,21 +94,29 @@ public abstract class Trabajador {
         this.matricula = matricula;
     }
 
-    public int getSueldo() {
+    public double getSueldo() {
         return sueldo;
     }
 
-    public void setSueldo(int sueldo) {
+    public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
     }
 
-    public int getAntiguedad() {
-        return antiguedad;
+    public String getAntiguedad(){
+        LocalDate ld =  LocalDate.now();
+        DateTimeFormatter ftm = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate origen = LocalDate.parse(getFechaContrato(), ftm);
+
+
+        Period antiguedad = Period.between(origen, ld);
+        return "Antiguedad:" + antiguedad.getYears() +" años, " +antiguedad.getMonths() +" meses y "+ antiguedad.getDays() +" días";
     }
 
-    public void setAntiguedad(int antiguedad) {
-        this.antiguedad = antiguedad;
+
+    public String getFechaContrato() {
+        return fechaContrato;
     }
+
 
     public void nuevoPersonal(){
 
