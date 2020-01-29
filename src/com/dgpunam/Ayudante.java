@@ -1,5 +1,10 @@
 package com.dgpunam;
 
+/**
+ *
+ * Hereda de {@link Trabajador}
+ * Forma parte de las clases donde se especializa el uso de la Abstracta trabajador
+ */
 public class Ayudante extends Trabajador {
 
     private String facultad;

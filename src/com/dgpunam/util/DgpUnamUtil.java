@@ -3,10 +3,17 @@ package com.dgpunam.util;
 import java.util.Scanner;
 
 public class DgpUnamUtil {
-
+    /**
+     * Este método sirve para controlar que en las entradas de enteros
+     * lo único que se pueda ingresar sean justo sólo valores numéricos y nada de cadenas
+     *
+     * @param msg mensaje de instrucciones al usuario o indicaciones
+     * @param error mensaje de error al detectar que la entrada no es un valor nummérico
+     * @return entero que validó y ahora puede ser utilizado
+     */
     public static int getInt(String msg, String error){
-        int i = 0;
-        String s;
+        int entero = 0;
+        String librearBuffer;
         boolean conti = true;
 
         Scanner scan = new Scanner(System.in);
@@ -15,13 +22,13 @@ public class DgpUnamUtil {
             System.out.println(msg);
             if(scan.hasNextInt())
             {
-                i = scan.nextInt();
+                entero = scan.nextInt();
                 conti = false;
             }else{
-                s = scan.next();
+                librearBuffer = scan.next();
                 System.out.println(error);
             }
         }while(conti);
-        return i;
+        return entero;
     }
 }
