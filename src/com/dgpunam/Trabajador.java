@@ -143,21 +143,29 @@ public abstract class Trabajador {
         }
     }
 
-    public void mostrarCheque(int matricula) {
-        String msj = "\n" +
-                "+-----------------------------------------------------+----------------------------------+-------------------------+--------------+--+\n" +
-                "|                Datos del trabajador                 |            Impuestos             |         Jornada          | Salario+++++ |  |\n" +
-                "+-----------------------------------------------------+----------------------------------+-------------------------+--------------+--+\n" +
-                "| Nombre: " + nombre + apellidoPaterno + apellidoMaterno + "                                      | SITUMAN:                         | Horas labordas: +++++++ |              |  |\n" +
-                "| Dirección: " + direccion + "                                      | ISR:                             |                         |              |  |\n" +
-                "| Puesto:" + "                                      | Ahorro para el retiro:++++++++++ |                         |              |  |\n" +
-                "| Matricula:                                          |                                  |                         |              |  |\n" +
-                "| CURP:                                               |                                  |                         |              |  |\n" +
-                "| Antigüedad:                                         |                                  |                         |              |  |\n" +
-                "| e-mail:                                             |                                  |                         |              |  |\n" +
-                "+-----------------------------------------------------+----------------------------------+-------------------------+--------------+--+\n" +
-                "\n";
-        System.out.printf(msj + "\n" +
+    @Override
+    public String toString() {
+        String datosTrabajador = "\n" +
+                "+--------------------------------------+\n" +
+                "|          Datos del trabajador        |\n" +
+                "+--------------------------------------+\n" +
+                "  Nombre: " +apellidoPaterno + " " + apellidoMaterno + " " + nombre+ "\n"+
+                "  Número de trabajador: " + matricula + "\n"+
+                "  " + getAntiguedad() + "\n"+
+                "  CURP: " + curp + "\n"+
+                "  Dirección: " + direccion + "\n"+
+                "  Correo electrónico: " + correoElectronico + "\n";
+
+
+        String salarioImpuestos = "\n \n" +
+                "+--------------------------+\n" +
+                "|          Salario         |\n" +
+                "+--------------------------+\n" +
+                " Salario base:  $ "+sueldo + "\n"+
+                " Deduccciones  -$ 540.36" + "\n"+
+                " Total:  $ "+  String.format("%.02f",sueldo-540.36) + "\n";
+
+        String logo =  "\n" +
                 "\n" +
                 " __    __  __    __   ______   __       __ \n" +
                 "|  \\  |  \\|  \\  |  \\ /      \\ |  \\     /  \\\n" +
@@ -171,8 +179,9 @@ public abstract class Trabajador {
                 "                                           \n" +
                 "                                           \n" +
                 "                                           \n" +
-                "\n");
+                "\n";
 
+        return datosTrabajador + salarioImpuestos + logo;
     }
 }
 

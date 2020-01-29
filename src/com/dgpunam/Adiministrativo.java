@@ -15,7 +15,7 @@ public class Adiministrativo extends Trabajador {
     public Adiministrativo(String nombre, String apellidoPaterno, String apellidoMaterno, String curp, String direccion,
                            String correoElectronico, int matricula, double sueldo, int dia, int mes, int year,
                            String lugarTrabajo, String puesto, Horario horario) {
-        super(nombre, apellidoMaterno, apellidoPaterno, curp, direccion, correoElectronico, matricula, sueldo, dia, mes, year);
+        super(nombre, apellidoPaterno, apellidoMaterno, curp, direccion, correoElectronico, matricula, sueldo, dia, mes, year);
         this.horario = horario;
         this.lugarTrabajo = lugarTrabajo;
         this.puesto = puesto;
@@ -133,8 +133,5 @@ public class Adiministrativo extends Trabajador {
         super.nuevoPersonal();
     }
 
-    @Override
-    public void mostrarCheque(int matricula) {
-        super.mostrarCheque(matricula);
-    }
+
 }
