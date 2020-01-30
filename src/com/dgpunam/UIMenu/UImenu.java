@@ -80,6 +80,10 @@ public class UImenu {
                 case 1:
                     String nombre = getStr("Ingrese el nombre del trabajador: ");
                     System.out.println("Este es el nombre que le asignó: " + nombre);
+                    String apellidoPaterno = getStr("Ingresse el apellido paterno: ");
+                    System.out.println("Apellido paterno asignado " + apellidoPaterno);
+                    String apellidoMaterno = getStr("Ingrese el apellido materno: ");
+                    System.out.println("Apellido paterno asignado " + apellidoMaterno);
                     break;
                 case 2:
 
