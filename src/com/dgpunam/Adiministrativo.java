@@ -1,5 +1,5 @@
 package com.dgpunam;
-
+//Hola
 import java.util.Date;
 
 public class Adiministrativo extends Trabajador {
