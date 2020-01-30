@@ -3,12 +3,12 @@ package com.dgpunam;
 public class Investigador extends Trabajador {
 
     private  String facultad;
-    private char nivelInv;
-    private  int nivelSNI;
+    private String nivelInv;
+    private  String nivelSNI;
 
     public Investigador(String nombre, String apellidoPaterno, String apellidoMaterno, String curp, String direccion,
                         String correoElectronico, int matricula, double sueldo, int diaContrat, int mes, int year,
-                        String facultad, char nivelInv, int nivelSNI) {
+                        String facultad, String nivelInv, String nivelSNI) {
         super(nombre, apellidoPaterno, apellidoMaterno, curp, direccion, correoElectronico, matricula, sueldo,
                 diaContrat, mes, year);
         this.facultad = facultad;

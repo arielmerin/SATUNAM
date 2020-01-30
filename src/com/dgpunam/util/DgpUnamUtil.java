@@ -41,6 +41,29 @@ public class DgpUnamUtil {
 
         return cadena.replaceAll("[\\d.]", "");
     }
+
+    public static double getDouble(String msg, String error){
+        double entero = 0.0;
+        Scanner scan = new Scanner(System.in);
+        String librearBuffer;
+        boolean conti = true;
+
+
+        do{
+            System.out.println(msg);
+            if(scan.hasNextDouble())
+            {
+                entero = scan.nextDouble();
+                conti = false;
+            }else{
+                librearBuffer = scan.next();
+                System.out.println(error);
+            }
+        }while(conti);
+        return entero;
+    }
+
+
 }
 
 
