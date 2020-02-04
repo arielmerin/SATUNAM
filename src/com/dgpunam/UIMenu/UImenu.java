@@ -90,7 +90,6 @@ public class UImenu {
 
                 case 1:
                     Trabajador inv = menuAltaGralTrabajador();
-
                     String facultity = getStr("Ingrese la facultad a la que pertenece el investigador: ");
                     String nivelInve = getStr("Ingrese el nivel de investigador: ");
                     String nivelSni = getStr("Ingrese la categoría en el SNI");
@@ -103,16 +102,11 @@ public class UImenu {
                     break;
                 case 2:
                     Trabajador prof = menuAltaGralTrabajador();
-
                     String facultityProfe = getStr("Ingrese la facultad a la que pertenece el profesor: ");
-
                     String claseP = getStr("Ingresa la clase que imparte: " );
-
                     Trabajador.Horario horarioProf = hacerHoraio();
-
                     System.out.print("Ingresa el nivel del profesor: ");
                     String nivelProf = scan.nextLine();
-
                     System.out.print("Ingresa el titulo del profesor: ");
                     String tituloProf = scan.nextLine();
 
@@ -127,11 +121,9 @@ public class UImenu {
                     Trabajador ayu = menuAltaGralTrabajador();
                     String facultityAyu = getStr("Ingrese la facultad a la que pertenece el profesor: ");
                     int creditos = getInt("Ingrese los creditos del ayudante: ", "Errorm ingrese valores numericos");
-
-                    int titul = getInt("Ingrese los creditos del ayudante: ", "Errorm ingrese valores numericos");
+                    int titul = getInt("Ingrese 1 si el ayudante esta titulado, 0 si no lo esta  ", "Errorm ingrese valores numericos");
                     boolean titulado = (titul == 1)?true: false;
                     String claseA = getStr("Ingresa la clase que imparte: " );
-
                     Trabajador.Horario horarioAyu = hacerHoraio();
 
                     Ayudante ayud = new Ayudante(ayu.getNombre(), ayu.getApellidoPaterno(), ayu.getApellidoMaterno(), ayu.getCurp(),
@@ -139,8 +131,18 @@ public class UImenu {
                             ayu.getMes(), ayu.getYear(), facultityAyu, creditos, titulado, claseA, horarioAyu);
 
                     trabajadores.agrega(ayud);
-
                     break;
+                case 4:
+                    Trabajador admin = menuAltaGralTrabajador();
+                    String lugar = getStr("Ingresa el lugar de trabajo: ");
+                    String puesto = getStr("Ingresa el lugar de trabajo: ");
+                    Trabajador.Horario horarioAd = hacerHoraio();
+
+                    Trabajador adm = new Adiministrativo(admin.getNombre(), admin.getApellidoPaterno(), admin.getApellidoMaterno(),
+                            admin.getCurp(),admin.getDireccion(),admin.getCorreoElectronico(),admin.getMatricula(),admin.getSueldo(),
+                            admin.getDiaContrat(),admin.getMes(),admin.getYear(),lugar,puesto,horarioAd);
+
+                    trabajadores.agrega(adm);
                 case 0:
                     System.out.println("Volviendo al menú principal...\n");
                     continuar = false;
