@@ -176,13 +176,6 @@ public class Trabajador {
                 "  Correo electrónico: " + correoElectronico + "\n";
 
 
-        String salarioImpuestos = "\n \n" +
-                "+--------------------------+\n" +
-                "|          Salario         |\n" +
-                "+--------------------------+\n" +
-                " Salario base:  $ "+sueldo + "\n"+
-                " Deduccciones  -$ 540.36" + "\n"+
-                " Total:  $ "+  String.format("%.02f",sueldo-540.36) + "\n";
 
         String logo =  "\n" +
                 "\n" +
@@ -200,7 +193,17 @@ public class Trabajador {
                 "                                           \n" +
                 "\n";
 
-        return datosTrabajador + salarioImpuestos + logo;
+        return datosTrabajador + logo;
+    }
+    public void cheque(){
+        String salarioImpuestos = "\n \n" +
+                "+--------------------------+\n" +
+                "|          Salario         |\n" +
+                "+--------------------------+\n" +
+                " Salario base:  $ "+sueldo + "\n"+
+                " Deduccciones  -$ 540.36" + "\n"+
+                " Total:  $ "+  String.format("%.02f",sueldo-540.36) + "\n";
+        System.out.println(salarioImpuestos);
     }
 }
 

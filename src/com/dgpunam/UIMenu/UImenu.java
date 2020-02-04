@@ -55,6 +55,7 @@ public class UImenu {
                     break;
                 case 4:
                     System.out.println(" :: IMPRMIR CHEQUE ::  ");
+                    imprimirCheque();
                     break;
                 case 5:
                     System.out.println(":: ANTIGÜEDAD ::  ");
@@ -62,6 +63,7 @@ public class UImenu {
                     break;
                 case 6:
                     System.out.println(":: MODIFICAR EMPLEADO ::  ");
+                    modificarEmpleado();
                     break;
                 case 0:
                     System.out.println("¡¡¡Hasta pronto!!!\n\n"+label);
@@ -181,5 +183,11 @@ public class UImenu {
         }
         aModificar.setNombre(obtenido.getNombre());
         System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)));
+    }
+    public static void imprimirCheque(){
+        int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
+        Trabajador tab = trabajadores.busca(lookingFor(trabajadores, matricula));
+        tab.cheque();
+
     }
 }
