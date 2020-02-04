@@ -168,11 +168,13 @@ public class UImenu {
 
                     System.out.println("Ingresa la hora de inicio de la clase: ");
                     String horario = scan.nextLine();
-                    int inicioPorfM = horario.;
-                    Trabajador.Horario horario = new Trabajador.Horario(inicioPorfH,inicioPorfM,terminoHP,terminoMP);
+                    String[] horarios =  horario.split(":");
+                    String inicioMinP = horarios[0];
+                    
 
                     Profesor prof = new Profesor(nombreProfe,apellidoPaternoProfe, apellidoMaternoProfe, curpProfe, direccionProfe, correoProfe,
-                            matriculaProfe, salarioProfe, diaProfe, mesProfe, agnoProfe, facultityProfe, claseP );
+                            matriculaProfe, salarioProfe, diaProfe, mesProfe, agnoProfe, facultityProfe, claseP, new Trabajador.Horario(14,25,16,19), (char) 5,
+                            "Titutlo del profesor");
                     break;
                 case 3:
                     String nombreAyu = getStr("Ingrese el nombre del investigador: ");
@@ -186,28 +188,26 @@ public class UImenu {
 
                     System.out.println("Ingresa el curp del investigador: ");
                     String curpAyu = scan.nextLine();
-                    System.out.println("El curp ingresado fue: " + curpProfe);
+                    System.out.println("El curp ingresado fue: " + curpAyu);
 
                     System.out.println("Ingresa el domicilio del investigador: ");
-                    String direccionProfe = scan.nextLine();
-                    System.out.println("La dirección ingresada fue: "+ direccionProfe );
+                    String direccionAyu = scan.nextLine();
+                    System.out.println("La dirección ingresada fue: "+ direccionAyu );
 
                     System.out.println("Ingresa el e-mail del investigador: ");
-                    String correoProfe = scan.nextLine();
-                    System.out.println("El correo ingresado fue: "+ correoProfe );
+                    String correoAyu = scan.nextLine();
+                    System.out.println("El correo ingresado fue: "+ correoAyu );
 
-                    int matriculaProfe = getInt("Ingresa la matrícula del investigador: ","Error, ingrese un valor numérico");
-                    System.out.println("La matricula ingresada fue: "+matriculaProfe);
+                    int matriculaAyu = getInt("Ingresa la matrícula del investigador: ","Error, ingrese un valor numérico");
+                    System.out.println("La matricula ingresada fue: "+matriculaAyu);
 
-                    double salarioProfe = getDouble("Ingrese el salario","Error, ingrese valores numéricos con decimales");
-                    System.out.println("El salario registrado de " + nombreProfe + " es: $"+salarioProfe);
+                    double salarioAyu = getDouble("Ingrese el salario","Error, ingrese valores numéricos con decimales");
+                    System.out.println("El salario registrado de " + nombreAyu + " es: $"+salarioAyu);
 
-                    int diaProfe = getInt("Ingrese el día en que fue contratado: ", "Error, debe ingresar un valor numérico");
-                    int mesProfe = getInt("Ingrese el mes en que fue contratado: ", "Error, debe ingresar un valor numérico");
-                    int agnoProfe = getInt("Ingrese el año en que fue contratado: ", "Error, debe ingresar un valor numérico");
-                    System.out.println("La fecha de contratación fue: " + diaProfe+"/"+mesProfe+"/"+agnoProfe);
-
-
+                    int diaAyu = getInt("Ingrese el día en que fue contratado: ", "Error, debe ingresar un valor numérico");
+                    int mesAyu = getInt("Ingrese el mes en que fue contratado: ", "Error, debe ingresar un valor numérico");
+                    int agnoAyu = getInt("Ingrese el año en que fue contratado: ", "Error, debe ingresar un valor numérico");
+                    System.out.println("La fecha de contratación fue: " + diaAyu+"/"+mesAyu+"/"+agnoAyu);
                     break;
                 case 0:
                     System.out.println("Volviendo al menú principal...\n");
