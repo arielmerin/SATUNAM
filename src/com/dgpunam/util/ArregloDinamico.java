@@ -3,10 +3,13 @@ package com.dgpunam.util; /**
  * @author Ariel Merino Peña
  */
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.Serializable;
 import java.util.Iterator;
 
 
-public class ArregloDinamico<T> implements Iterable<T> {
+public class ArregloDinamico<T> implements Iterable<T>, Serializable {
 
     private T[] arreglo;
     private int elementos;
@@ -60,7 +63,7 @@ public class ArregloDinamico<T> implements Iterable<T> {
     /**
      * Constructor por omisión
      */
-    public ArregloDinamico() {
+    public ArregloDinamico() throws IOException {
         /**
          * Crear un arreglo de este tamaño
          */
@@ -169,9 +172,7 @@ public class ArregloDinamico<T> implements Iterable<T> {
      */
     @Override
     public String toString() {
-        /**
-         * tiene que regresar esto
-         */
+
         StringBuilder std = new StringBuilder();
         Iterador it = new Iterador();
         while (it.hasNext()){

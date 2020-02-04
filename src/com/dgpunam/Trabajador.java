@@ -1,13 +1,9 @@
 package com.dgpunam;
 
-import javax.swing.text.DateFormatter;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.chrono.ChronoPeriod;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 public abstract class Trabajador {
@@ -20,6 +16,10 @@ public abstract class Trabajador {
     private int matricula;
     private double sueldo;
     private String fechaContrato;
+    private int diaContrat;
+    private int mes;
+    private int year;
+    
 
     public Trabajador(String nombre, String apellidoPaterno, String apellidoMaterno, String curp,
                       String direccion, String correoElectronico, int matricula, double sueldo, int diaContrat,
