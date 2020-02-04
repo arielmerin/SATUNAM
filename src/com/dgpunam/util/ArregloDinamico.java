@@ -41,13 +41,9 @@ public class ArregloDinamico<T> implements Iterable<T>, Serializable {
 
         @Override
         public T next() {
-            if (hasNext()) {
-                T aux = (T) arreglo[siguiente];
-                siguiente++;
-                return aux;
-            }else {
-                return null;
-            }
+            T aux = (T) arreglo[siguiente];
+            siguiente++;
+            return aux;
         }
 
         @Override

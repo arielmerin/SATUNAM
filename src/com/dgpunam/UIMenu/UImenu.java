@@ -1,11 +1,9 @@
 package com.dgpunam.UIMenu;
 
-import com.dgpunam.Adiministrativo;
-import com.dgpunam.Investigador;
-import com.dgpunam.Profesor;
-import com.dgpunam.Trabajador;
+import com.dgpunam.*;
 import com.dgpunam.util.ArregloDinamico;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -13,7 +11,16 @@ import java.util.Scanner;
 import static com.dgpunam.util.DgpUnamUtil.*;
 
 public class UImenu {
-    private static ArregloDinamico<Trabajador> trabajadores = new ArregloDinamico<>();
+    private static ArregloDinamico<Trabajador> trabajadores;
+
+    static {
+        try {
+            trabajadores = new ArregloDinamico();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void uiMenu(){
         String label = "/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/\n" +
                 "\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\\n" +
@@ -74,8 +81,8 @@ public class UImenu {
             System.out.println("Ingrese una opción válida");
             System.out.println("[1] Investigador");
             System.out.println("[2] Profesor");
-            System.out.println("[2] Ayudante");
-            System.out.println("[3] Administrativo");
+            System.out.println("[3] Ayudante");
+            System.out.println("[4] Administrativo");
             System.out.println("[0] Salir");
             Scanner scan = new Scanner(System.in);
             int respuesta = getInt("Ingrese la opción deseada: ", "Error, ingrese un número");
@@ -88,149 +95,56 @@ public class UImenu {
                     String nivelInve = getStr("Ingrese el nivel de investigador: ");
                     String nivelSni = getStr("Ingrese la categoría en el SNI");
 
-                    Trabajador ariel = new Adiministrativo("Ariel", "Merino", "Peña", "MEPK010305MHCRXVA5","Calle tecalli ok",
-                            "arielmerino@ciencias.unam.mx",317031326,197000.584,14, 11, 2001,
-                            "Facultad de Ciencias","Investigador",new Trabajador.Horario(9,00,13,30));
                     Investigador arielin = new Investigador(inv.getNombre(),inv.getApellidoPaterno(),inv.getApellidoMaterno(),inv.getCurp(),inv.getDireccion(),
-                            inv.getCorreoElectronico(),inv.getMatricula(), inv.getSueldo(), inv.get, mes, agno, facultity, nivelInve, nivelSni);
+                            inv.getCorreoElectronico(),inv.getMatricula(), inv.getSueldo(), inv.getDiaContrat(), inv.getMes(), inv.getYear(), facultity, nivelInve, nivelSni);
 
-                    trabajadores.agrega(ariel);
                     trabajadores.agrega(arielin);
+                    System.out.println(trabajadores);
                     break;
                 case 2:
-                    String nombreProfe = getStr("Ingrese el nombre del investigador: ");
-                    System.out.println("Este es el nombre que le asignó: " + nombreProfe);
+                    Trabajador prof = menuAltaGralTrabajador();
 
-                    String apellidoPaternoProfe = getStr("Ingresse el apellido paterno: ");
-                    System.out.println("Apellido paterno asignado " + apellidoPaternoProfe);
-
-                    String apellidoMaternoProfe = getStr("Ingrese el apellido materno: ");
-                    System.out.println("Apellido paterno asignado " + apellidoMaternoProfe);
-
-                    System.out.println("Ingresa el curp del investigador: ");
-                    String curpProfe = scan.nextLine();
-                    System.out.println("El curp ingresado fue: " + curpProfe);
-
-                    System.out.println("Ingresa el domicilio del investigador: ");
-                    String direccionProfe = scan.nextLine();
-                    System.out.println("La dirección ingresada fue: "+ direccionProfe );
-
-                    System.out.println("Ingresa el e-mail del investigador: ");
-                    String correoProfe = scan.nextLine();
-                    System.out.println("El correo ingresado fue: "+ correoProfe );
-
-                    int matriculaProfe = getInt("Ingresa la matrícula del investigador: ","Error, ingrese un valor numérico");
-                    System.out.println("La matricula ingresada fue: "+matriculaProfe);
-
-                    double salarioProfe = getDouble("Ingrese el salario","Error, ingrese valores numéricos con decimales");
-                    System.out.println("El salario registrado de " + nombreProfe + " es: $"+salarioProfe);
-
-                    int diaProfe = getInt("Ingrese el día en que fue contratado: ", "Error, debe ingresar un valor numérico");
-                    int mesProfe = getInt("Ingrese el mes en que fue contratado: ", "Error, debe ingresar un valor numérico");
-                    int agnoProfe = getInt("Ingrese el año en que fue contratado: ", "Error, debe ingresar un valor numérico");
-                    System.out.println("La fecha de contratación fue: " + diaProfe+"/"+mesProfe+"/"+agnoProfe);
-
-                    String facultityProfe = getStr("Ingrese la facultad a la que pertenece el investigador: ");
+                    String facultityProfe = getStr("Ingrese la facultad a la que pertenece el profesor: ");
 
                     String claseP = getStr("Ingresa la clase que imparte: " );
 
-                    System.out.println("Ingresa el horario de inicio: con el siguiente formato HH:MM");
-                    String horarioini = scan.nextLine();
-                    String[] horariosini =  horarioini.split(":");
-                    int inicioHP = Integer.parseInt(horariosini[0]);
-                    int inicioMP = Integer.parseInt(horariosini[1]);
+                    Trabajador.Horario horarioProf = hacerHoraio();
 
-                    System.out.println("Ingresa la hora en que termina la clase, con el siguiente formato HH:MM");
-                    String horariofin = scan.nextLine();
-                    String[] horariosfin =  horariofin.split(":");
-                    int finHP = Integer.parseInt(horariosfin[0]);
-                    int finMP = Integer.parseInt(horariosfin[1]);
+                    System.out.print("Ingresa el nivel del profesor: ");
+                    String nivelProf = scan.nextLine();
 
-                    System.out.println("Ingresa la hora en que termina la clase, con el siguiente formato HH:MM");
-                    String nivelAyu = scan.nextLine();
+                    System.out.print("Ingresa el titulo del profesor: ");
+                    String tituloProf = scan.nextLine();
 
-                    System.out.println("Ingresa el titulo del ayudante: ");
-                    String tituloAyud = scan.nextLine();
+                    Profesor profe = new Profesor(prof.getNombre(),prof.getApellidoPaterno(), prof.getApellidoMaterno(),
+                            prof.getCurp(), prof.getDireccion(), prof.getCorreoElectronico(), prof.getMatricula(),
+                            prof.getSueldo(), prof.getDiaContrat(), prof.getMes(), prof.getYear(), facultityProfe,
+                            claseP, horarioProf, nivelProf, tituloProf);
 
-                    Profesor prof = new Profesor(nombreProfe,apellidoPaternoProfe, apellidoMaternoProfe, curpProfe,
-                            direccionProfe, correoProfe, matriculaProfe, salarioProfe, diaProfe, mesProfe, agnoProfe,
-                            facultityProfe, claseP, new Trabajador.Horario(inicioHP,inicioMP,finHP,finMP), nivelAyu,
-                            tituloAyud);
+                    trabajadores.agrega(profe);
                     break;
                 case 3:
-                    String nombreAyu = getStr("Ingrese el nombre del investigador: ");
-                    System.out.println("Este es el nombre que le asignó: " + nombreAyu);
+                    Trabajador ayu = menuAltaGralTrabajador();
+                    String facultityAyu = getStr("Ingrese la facultad a la que pertenece el profesor: ");
+                    int creditos = getInt("Ingrese los creditos del ayudante: ", "Errorm ingrese valores numericos");
 
-                    String apellidoPaternoAyu = getStr("Ingresse el apellido paterno: ");
-                    System.out.println("Apellido paterno asignado " + apellidoPaternoAyu);
+                    int titul = getInt("Ingrese los creditos del ayudante: ", "Errorm ingrese valores numericos");
+                    boolean titulado = (titul == 1)?true: false;
+                    String claseA = getStr("Ingresa la clase que imparte: " );
 
-                    String apellidoMaternoAyu = getStr("Ingrese el apellido materno: ");
-                    System.out.println("Apellido paterno asignado " + apellidoMaternoAyu);
+                    Trabajador.Horario horarioAyu = hacerHoraio();
 
-                    System.out.println("Ingresa el curp del investigador: ");
-                    String curpAyu = scan.nextLine();
-                    System.out.println("El curp ingresado fue: " + curpAyu);
+                    Ayudante ayud = new Ayudante(ayu.getNombre(), ayu.getApellidoPaterno(), ayu.getApellidoMaterno(), ayu.getCurp(),
+                            ayu.getDireccion(), ayu.getCorreoElectronico(), ayu.getMatricula(), ayu.getSueldo(), ayu.getDiaContrat(),
+                            ayu.getMes(), ayu.getYear(), facultityAyu, creditos, titulado, claseA, horarioAyu);
 
-                    System.out.println("Ingresa el domicilio del investigador: ");
-                    String direccionAyu = scan.nextLine();
-                    System.out.println("La dirección ingresada fue: "+ direccionAyu );
+                    trabajadores.agrega(ayud);
 
-                    System.out.println("Ingresa el e-mail del investigador: ");
-                    String correoAyu = scan.nextLine();
-                    System.out.println("El correo ingresado fue: "+ correoAyu );
-
-                    int matriculaAyu = getInt("Ingresa la matrícula del investigador: ","Error, ingrese un valor numérico");
-                    System.out.println("La matricula ingresada fue: "+matriculaAyu);
-
-                    double salarioAyu = getDouble("Ingrese el salario","Error, ingrese valores numéricos con decimales");
-                    System.out.println("El salario registrado de " + nombreAyu + " es: $"+salarioAyu);
-
-                    int diaAyu = getInt("Ingrese el día en que fue contratado: ", "Error, debe ingresar un valor numérico");
-                    int mesAyu = getInt("Ingrese el mes en que fue contratado: ", "Error, debe ingresar un valor numérico");
-                    int agnoAyu = getInt("Ingrese el año en que fue contratado: ", "Error, debe ingresar un valor numérico");
-                    System.out.println("La fecha de contratación fue: " + diaAyu+"/"+mesAyu+"/"+agnoAyu);
                     break;
                 case 0:
                     System.out.println("Volviendo al menú principal...\n");
                     continuar = false;
-
             }
-
-
         }while (continuar);
-    }
-    public static Trabajador menuAltaGralTrabajador(){
-        Scanner scan = new Scanner(System.in);
-        String nombre = getStr("Ingrese el nombre del investigador: ");
-        System.out.println("Este es el nombre que le asignó: " + nombre);
-
-        String apellidoPaterno = getStr("Ingresse el apellido paterno: ");
-        System.out.println("Apellido paterno asignado " + apellidoPaterno);
-
-        String apellidoMaterno = getStr("Ingrese el apellido materno: ");
-        System.out.println("Apellido paterno asignado " + apellidoMaterno);
-
-        System.out.println("Ingresa el curp del investigador: ");
-        String curp = scan.nextLine();
-        System.out.println("El curp ingresado fue: " + curp);
-
-        System.out.println("Ingresa el domicilio del investigador: ");
-        String direccion = scan.nextLine();
-        System.out.println("La dirección ingresada fue: "+ direccion );
-
-        System.out.println("Ingresa el e-mail del investigador: ");
-        String correo = scan.nextLine();
-        System.out.println("El correo ingresado fue: "+ correo );
-
-        int matricula = getInt("Ingresa la matrícula del investigador: ","Error, ingrese un valor numérico");
-        System.out.println("La matricula ingresada fue: "+matricula);
-
-        double salario = getDouble("Ingrese el salario","Error, ingrese valores numéricos con decimales");
-        System.out.println("El salario registrado de " + nombre + " es: $"+salario);
-
-        int dia = getInt("Ingrese el día en que fue contratado: ", "Error, debe ingresar un valor numérico");
-        int mes = getInt("Ingrese el mes en que fue contratado: ", "Error, debe ingresar un valor numérico");
-        int agno = getInt("Ingrese el año en que fue contratado: ", "Error, debe ingresar un valor numérico");
-        System.out.println("La fecha de contratación fue: " + dia+"/"+mes+"/"+agno);
     }
 }

@@ -6,7 +6,7 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.GregorianCalendar;
 
-public abstract class Trabajador {
+public class Trabajador {
     private String nombre;
     private String apellidoMaterno;
     private String apellidoPaterno;
@@ -19,7 +19,30 @@ public abstract class Trabajador {
     private int diaContrat;
     private int mes;
     private int year;
-    
+
+    public int getDiaContrat() {
+        return diaContrat;
+    }
+
+    public void setDiaContrat(int diaContrat) {
+        this.diaContrat = diaContrat;
+    }
+
+    public int getMes() {
+        return mes;
+    }
+
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
 
     public Trabajador(String nombre, String apellidoPaterno, String apellidoMaterno, String curp,
                       String direccion, String correoElectronico, int matricula, double sueldo, int diaContrat,
