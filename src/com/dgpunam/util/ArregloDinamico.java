@@ -67,9 +67,6 @@ public class ArregloDinamico<T> implements Iterable<T>, Serializable {
     public ArregloDinamico(int n) {
         arreglo = (T[])new Object[n];
         elementos = 0;
-        /**
-         * Crear un arreglo de este tamaño
-         */
     }
 
     /**

@@ -96,8 +96,4 @@ public class Investigador extends Trabajador {
         super.setSueldo(sueldo);
     }
 
-    @Override
-    public void nuevoPersonal() {
-        super.nuevoPersonal();
-    }
 }

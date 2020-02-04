@@ -159,4 +159,27 @@ public class UImenu {
         int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
         System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)).getAntiguedad());
     }
+    public static void modificarEmpleado(){
+
+        int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
+        System.out.println("Ingrese el area al que pertenece\n[1] Investigador\n[2] Profesor\n[3] Ayudante\n[4] Administrativo");
+        int respuesta = getInt("Ingrese la opción deseada: ", "Error, ingrese un número");
+        Trabajador obtenido = menuAltaGralTrabajador();
+        Trabajador aModificar = trabajadores.busca(lookingFor(trabajadores, matricula));
+        switch (respuesta){
+            case 1:
+
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            default:
+
+        }
+        aModificar.setNombre(obtenido.getNombre());
+        System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)));
+    }
 }

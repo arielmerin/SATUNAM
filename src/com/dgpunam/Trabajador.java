@@ -141,10 +141,6 @@ public class Trabajador {
     }
 
 
-    public void nuevoPersonal(){
-
-    }
-
     public static class Horario{
         int inicioHoras;
         int terminoHoras;

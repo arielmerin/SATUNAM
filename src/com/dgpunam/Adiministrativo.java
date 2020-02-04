@@ -126,12 +126,4 @@ public class Adiministrativo extends Trabajador {
         return super.getFechaContrato();
     }
 
-
-
-    @Override
-    public void nuevoPersonal() {
-        super.nuevoPersonal();
-    }
-
-
 }
