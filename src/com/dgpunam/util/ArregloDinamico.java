@@ -14,14 +14,6 @@ public class ArregloDinamico<T> implements Iterable<T>, Serializable {
     private T[] arreglo;
     private int elementos;
 
-    public T[] getArreglo() {
-        return arreglo;
-    }
-
-    public int getElementos() {
-        return elementos;
-    }
-
     /**
      * No importa el nombre que se le ponga a la clase, solo es para fines didácticos
      * @param <T>

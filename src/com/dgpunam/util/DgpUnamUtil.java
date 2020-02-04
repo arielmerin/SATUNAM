@@ -5,8 +5,6 @@ import com.dgpunam.Trabajador;
 import java.util.Scanner;
 
 public class DgpUnamUtil {
-
-
     /**
      * Este método sirve para controlar que en las entradas de enteros
      * lo único que se pueda ingresar sean justo sólo valores numéricos y nada de cadenas
@@ -49,7 +47,6 @@ public class DgpUnamUtil {
         Scanner scan = new Scanner(System.in);
         String librearBuffer;
         boolean conti = true;
-
 
         do{
             System.out.println(msg);
@@ -117,7 +114,16 @@ public class DgpUnamUtil {
         int finM = Integer.parseInt(horariosAfin[1]);
         return new Trabajador.Horario(inicioH,inicioM,finH,finM);
     }
-
+    public static int lookingFor(ArregloDinamico<Trabajador> arreglo, int busqueda){
+        int contador = 0;
+        for(Trabajador trab: arreglo){
+            contador++;
+            if (trab.getMatricula() == busqueda){
+                return contador;
+            }
+        }
+        return -1;
+    }
 }
 
 
