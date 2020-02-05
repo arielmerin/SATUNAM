@@ -55,7 +55,9 @@ public class UImenu {
                     break;
                 case 4:
                     System.out.println(" :: IMPRMIR CHEQUE ::  ");
-                    imprimirCheque();
+                    int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
+                    Trabajador tab = trabajadores.busca(lookingFor(trabajadores, matricula));
+                    tab.cheque();
                     break;
                 case 5:
                     System.out.println(":: ANTIGÜEDAD ::  ");
@@ -164,27 +166,63 @@ public class UImenu {
     public static void modificarEmpleado(){
 
         int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
-        Trabajador modificaTrabajador = trabajadores.busca(lookingFor(trabajadores, matricula));
-        System.out.println("Este es el empleado a eliminar: \n" + modificaTrabajador);
+        int indice = lookingFor(trabajadores, matricula);
+        Trabajador modificaTrabajador = trabajadores.busca(indice);
+        System.out.println("Este es el empleado a modificar: \n" + modificaTrabajador);
+        Trabajador gral = menuAltaGralTrabajador();
+        Scanner scan = new Scanner(System.in);
         if(modificaTrabajador instanceof Profesor){
+            String facultityProfe = getStr("Ingrese la facultad a la que pertenece el profesor: ");
+            String claseP = getStr("Ingresa la clase que imparte: " );
+            Trabajador.Horario horarioProf = hacerHoraio();
+            System.out.print("Ingresa el nivel del profeso  r: ");
+            String nivelProf = scan.nextLine();
+            System.out.print("Ingresa el titulo del profesor: ");
+            String tituloProf = scan.nextLine();
 
+            Profesor profe = new Profesor(gral.getNombre(),gral.getApellidoPaterno(), gral.getApellidoMaterno(),
+                    gral.getCurp(), gral.getDireccion(), gral.getCorreoElectronico(), gral.getMatricula(),
+                    gral.getSueldo(), gral.getDiaContrat(), gral.getMes(), gral.getYear(), facultityProfe,
+                    claseP, horarioProf, nivelProf, tituloProf);
+
+            trabajadores.agrega(profe, indice);
         }else if(modificaTrabajador instanceof Ayudante){
+            String facultityAyu = getStr("Ingrese la facultad a la que pertenece el profesor: ");
+            int creditos = getInt("Ingrese los creditos del ayudante: ", "Errorm ingrese valores numericos");
+            int titul = getInt("Ingrese 1 si el ayudante esta titulado, 0 si no lo esta  ", "Errorm ingrese valores numericos");
+            boolean titulado = (titul == 1)?true: false;
+            String claseA = getStr("Ingresa la clase que imparte: " );
+            Trabajador.Horario horarioAyu = hacerHoraio();
+
+            Ayudante ayudante = new Ayudante(gral.getNombre(), gral.getApellidoPaterno(), gral.getApellidoMaterno(), gral.getCurp(),
+                    gral.getDireccion(), gral.getCorreoElectronico(), gral.getMatricula(), gral.getSueldo(), gral.getDiaContrat(),
+                    gral.getMes(), gral.getYear(), facultityAyu, creditos, titulado, claseA, horarioAyu);
+
+            trabajadores.agrega(ayudante, indice);
 
         }else if (modificaTrabajador instanceof Investigador){
+            String facultity = getStr("Ingrese la facultad a la que pertenece el investigador: ");
+            String nivelInve = getStr("Ingrese el nivel de investigador: ");
+            String nivelSni = getStr("Ingrese la categoría en el SNI");
 
+            Investigador investigador = new Investigador(gral.getNombre(),gral.getApellidoPaterno(),gral.getApellidoMaterno(),
+                    gral.getCurp(),gral.getDireccion(), gral.getCorreoElectronico(),gral.getMatricula(), gral.getSueldo(),
+                    gral.getDiaContrat(), gral.getMes(), gral.getYear(), facultity, nivelInve, nivelSni);
+
+            trabajadores.agrega(investigador, indice);
         }else{
+            String lugar = getStr("Ingresa el lugar de trabajo: ");
+            String puesto = getStr("Ingresa el lugar de trabajo: ");
+            Trabajador.Horario horarioAd = hacerHoraio();
 
+            Trabajador adm = new Adiministrativo(gral.getNombre(), gral.getApellidoPaterno(), gral.getApellidoMaterno(),
+                    gral.getCurp(),gral.getDireccion(),gral.getCorreoElectronico(),gral.getMatricula(),gral.getSueldo(),
+                    gral.getDiaContrat(),gral.getMes(),gral.getYear(),lugar,puesto,horarioAd);
+
+            trabajadores.agrega(adm, indice);
         }
-        Trabajador obtenido = menuAltaGralTrabajador();
-        Trabajador aModificar = trabajadores.busca(lookingFor(trabajadores, matricula));
 
-        aModificar.setNombre(obtenido.getNombre());
         System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)));
     }
-    public static void imprimirCheque(){
-        int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
-        Trabajador tab = trabajadores.busca(lookingFor(trabajadores, matricula));
-        tab.cheque();
 
-    }
 }

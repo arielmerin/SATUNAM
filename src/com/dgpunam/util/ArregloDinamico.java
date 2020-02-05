@@ -91,6 +91,10 @@ public class ArregloDinamico<T> implements Iterable<T>, Serializable {
         elementos++;
     }
 
+    public void agrega(T elem, int posicion) {
+        this.arreglo[posicion] = elem;
+    }
+
     /**
      * Método para acceder al elemento n-esimo del arreglo dinámico. El método
      * debe devolver el elemento buscado. Si no existe elemento n-esimo,
