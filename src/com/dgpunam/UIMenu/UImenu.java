@@ -164,6 +164,17 @@ public class UImenu {
     public static void modificarEmpleado(){
 
         int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
+        Trabajador modificaTrabajador = trabajadores.busca(lookingFor(trabajadores, matricula));
+        System.out.println("Este es el empleado a eliminar: \n" + modificaTrabajador);
+        if(modificaTrabajador instanceof Profesor){
+
+        }else if(modificaTrabajador instanceof Ayudante){
+            
+        }else if (modificaTrabajador instanceof Investigador){
+
+        }else{
+
+        }
         System.out.println("Ingrese el area al que pertenece\n[1] Investigador\n[2] Profesor\n[3] Ayudante\n[4] Administrativo");
         int respuesta = getInt("Ingrese la opción deseada: ", "Error, ingrese un número");
         Trabajador obtenido = menuAltaGralTrabajador();
