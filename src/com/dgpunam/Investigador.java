@@ -1,11 +1,31 @@
 package com.dgpunam;
 
+/**
+ * Esta clase permite manejar de forma correcta el comportamiento y los atributos particulares de unx trabajadorx
+ */
 public class Investigador extends Trabajador {
 
     private  String facultad;
     private String nivelInv;
     private  String nivelSNI;
 
+    /**
+     * Constructor principal, permite ingresar datos necesarios para dar de alta investigadores en el sistema
+     * @param nombre Nombre que recibira la (el) Investigadorx
+     * @param apellidoPaterno Apellido que se le otorga a la (al) Investigadorx
+     * @param apellidoMaterno Apellido materno que se le asigna al Investigadorx
+     * @param curp Clave unica de registro de poblacion que se le confiere al Investigadorx
+     * @param direccion Direccion donde se encuentra ubicado el domicilio delx Investigadorx
+     * @param correoElectronico Email delx Investigadorx
+     * @param matricula Clave unica en el registro de Investigadorx
+     * @param sueldo Salario por el cual realiza las labores de Investigadorx
+     * @param diaContrat Dia en que fue contratadx
+     * @param mes Mes en el que fue contratadx
+     * @param year Año en el que fue contratadx
+     * @param facultad Facultad a la que pertenece la (el) Investigadorx
+     * @param nivelInv Nivel de investigadorx
+     * @param nivelSNI Nivel en el sistema nacional de investigadorxs
+     */
     public Investigador(String nombre, String apellidoPaterno, String apellidoMaterno, String curp, String direccion,
                         String correoElectronico, int matricula, double sueldo, int diaContrat, int mes, int year,
                         String facultad, String nivelInv, String nivelSNI) {
@@ -16,14 +36,33 @@ public class Investigador extends Trabajador {
         this.nivelSNI = nivelSNI;
     }
 
-    @Override
-    public String getNombre() {
-        return super.getNombre();
+    /**
+     * Permite acceder a la facultad delx Investigadorx
+     * @return facultad donde labora
+     */
+    public String getFacultad() {
+        return facultad;
+    }
+
+    /**
+     * Permite acceder al nivel de Investigadorx
+     * @return nivel de investigadrx
+     */
+    public String getNivelInv() {
+        return nivelInv;
+    }
+
+    /**
+     * Permite acceder al nivel que tiene en el sistema nacional de investigadorxs
+     * @return nivel en el SNI
+     */
+    public String getNivelSNI() {
+        return nivelSNI;
     }
 
     @Override
-    public void setNombre(String nombre) {
-        super.setNombre(nombre);
+    public String getNombre() {
+        return super.getNombre();
     }
 
     @Override
@@ -32,18 +71,8 @@ public class Investigador extends Trabajador {
     }
 
     @Override
-    public void setApellidoMaterno(String apellidoMaterno) {
-        super.setApellidoMaterno(apellidoMaterno);
-    }
-
-    @Override
     public String getApellidoPaterno() {
         return super.getApellidoPaterno();
-    }
-
-    @Override
-    public void setApellidoPaterno(String apellidoPaterno) {
-        super.setApellidoPaterno(apellidoPaterno);
     }
 
     @Override
@@ -52,18 +81,8 @@ public class Investigador extends Trabajador {
     }
 
     @Override
-    public void setCurp(String curp) {
-        super.setCurp(curp);
-    }
-
-    @Override
     public String getDireccion() {
         return super.getDireccion();
-    }
-
-    @Override
-    public void setDireccion(String direccion) {
-        super.setDireccion(direccion);
     }
 
     @Override
@@ -72,28 +91,12 @@ public class Investigador extends Trabajador {
     }
 
     @Override
-    public void setCorreoElectronico(String correoElectronico) {
-        super.setCorreoElectronico(correoElectronico);
-    }
-
-    @Override
     public int getMatricula() {
         return super.getMatricula();
-    }
-
-    @Override
-    public void setMatricula(int matricula) {
-        super.setMatricula(matricula);
     }
 
     @Override
     public double getSueldo() {
         return super.getSueldo();
     }
-
-    @Override
-    public void setSueldo(double sueldo) {
-        super.setSueldo(sueldo);
-    }
-
 }
