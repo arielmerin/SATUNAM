@@ -1,9 +1,15 @@
 package com.dgpunam.util;
 
 import com.dgpunam.Trabajador;
-
 import java.util.Scanner;
 
+/**
+ * <h1>Utilidadaes</h1>
+ * Clase que sirve de auxiliar a menu para permitir la entrada de datos desde la terminal y realizar las validaciones
+ * necesarias para el requerimiento de tipo de dato
+ * @authors Aquino Chapa Armando Abraham and Ariel Merino Peña
+ * @version 1
+ */
 public class DgpUnamUtil {
     /**
      * Este método sirve para controlar que en las entradas de enteros
@@ -34,6 +40,12 @@ public class DgpUnamUtil {
         return entero;
     }
 
+    /**
+     * Este metodo imprime el pantalla un mensaje solicitando al usuario que ingrese una cadena, capta ese valor y lo
+     * devuelve
+     * @param messaje Instrucciones para que el usuario haga la entrada correspondiente
+     * @return cadena que el usuario ingreso por la terminal
+     */
     public static String getStr(String messaje){
         Scanner scan = new Scanner(System.in);
         System.out.println(messaje);
@@ -42,6 +54,13 @@ public class DgpUnamUtil {
         return cadena.replaceAll("[\\d.]", "");
     }
 
+    /**
+     * Metodo que permite el ingreso de valores de tipo double y solo esos, pues restringe la entrada de valores de tipo
+     * cadena o caracter
+     * @param msg Instrucciones para el usuario
+     * @param error Mensaje que se muestra cada vez que el usuario no ingresa un valor correcto
+     * @return Numero que el usuario ingreso
+     */
     public static double getDouble(String msg, String error){
         double entero = 0.0;
         Scanner scan = new Scanner(System.in);
@@ -61,6 +80,11 @@ public class DgpUnamUtil {
         }while(conti);
         return entero;
     }
+
+    /**
+     * Sirve de apoyo en el ingreso de nuevo personal y en la modificacion de los trabajadores
+     * @return trbajador con los datos que solicito
+     */
     public static Trabajador menuAltaGralTrabajador(){
         Scanner scan = new Scanner(System.in);
         String nombre = getStr("Ingrese el nombre del investigador: ");
@@ -97,7 +121,13 @@ public class DgpUnamUtil {
         return new Trabajador(nombre, apellidoPaterno, apellidoMaterno, curp, direccion, correo, matricula, salario, dia,
                 mes, agno);
     }
-    public static Trabajador.Horario hacerHoraio(){
+
+    /**
+     * Imprime en la pantalla instrucciones al usuario para que este se encargue de proporcionar los datos que permitiran
+     * crear un horario de algun empleado, ademas otorga formato a la entrada
+     * @return
+     */
+    public static Trabajador.Horario hacerHorario(){
 
         System.out.println("Ingresa el horario de inicio: con el siguiente formato HH:MM");
         Scanner scan = new Scanner(System.in);
@@ -114,6 +144,14 @@ public class DgpUnamUtil {
         int finM = Integer.parseInt(horariosAfin[1]);
         return new Trabajador.Horario(inicioH,inicioM,finH,finM);
     }
+
+    /**
+     * <h1>BUSQUEDA</h1>
+     * Se encaraga de hacer la busqueda en el conjunto de los trabajadores comparando la matricula proporcionada
+     * @param arreglo Lugar donde sobre el que se va a iterar para obtener un resultado de busqueda
+     * @param busqueda El numero de matricula que se esta intentando encntrar
+     * @return la posicion donde lo encontro el el error que simboliza -1
+     */
     public static int lookingFor(ArregloDinamico<Trabajador> arreglo, int busqueda){
         int contador = 0;
         for(Trabajador trab: arreglo){

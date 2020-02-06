@@ -124,7 +124,7 @@ public class UImenu {
                     Trabajador prof = menuAltaGralTrabajador();
                     String facultityProfe = getStr("Ingrese la facultad a la que pertenece el profesor: ");
                     String claseP = getStr("Ingresa la clase que imparte: " );
-                    Trabajador.Horario horarioProf = hacerHoraio();
+                    Trabajador.Horario horarioProf = hacerHorario();
                     System.out.print("Ingresa el nivel del profesor: ");
                     String nivelProf = scan.nextLine();
                     System.out.print("Ingresa el titulo del profesor: ");
@@ -144,7 +144,7 @@ public class UImenu {
                     int titul = getInt("Ingrese 1 si el ayudante esta titulado, 0 si no lo esta  ", "Errorm ingrese valores numericos");
                     boolean titulado = (titul == 1)?true: false;
                     String claseA = getStr("Ingresa la clase que imparte: " );
-                    Trabajador.Horario horarioAyu = hacerHoraio();
+                    Trabajador.Horario horarioAyu = hacerHorario();
 
                     Ayudante ayud = new Ayudante(ayu.getNombre(), ayu.getApellidoPaterno(), ayu.getApellidoMaterno(), ayu.getCurp(),
                             ayu.getDireccion(), ayu.getCorreoElectronico(), ayu.getMatricula(), ayu.getSueldo(), ayu.getDiaContrat(),
@@ -156,7 +156,7 @@ public class UImenu {
                     Trabajador admin = menuAltaGralTrabajador();
                     String lugar = getStr("Ingresa el lugar de trabajo: ");
                     String puesto = getStr("Ingresa el lugar de trabajo: ");
-                    Trabajador.Horario horarioAd = hacerHoraio();
+                    Trabajador.Horario horarioAd = hacerHorario();
 
                     Trabajador adm = new Adiministrativo(admin.getNombre(), admin.getApellidoPaterno(), admin.getApellidoMaterno(),
                             admin.getCurp(),admin.getDireccion(),admin.getCorreoElectronico(),admin.getMatricula(),admin.getSueldo(),
@@ -215,7 +215,7 @@ public class UImenu {
         if(modificaTrabajador instanceof Profesor){
             String facultityProfe = getStr("Ingrese la facultad a la que pertenece el profesor: ");
             String claseP = getStr("Ingresa la clase que imparte: " );
-            Trabajador.Horario horarioProf = hacerHoraio();
+            Trabajador.Horario horarioProf = hacerHorario();
             System.out.print("Ingresa el nivel del profeso  r: ");
             String nivelProf = scan.nextLine();
             System.out.print("Ingresa el titulo del profesor: ");
@@ -233,7 +233,7 @@ public class UImenu {
             int titul = getInt("Ingrese 1 si el ayudante esta titulado, 0 si no lo esta  ", "Errorm ingrese valores numericos");
             boolean titulado = (titul == 1)?true: false;
             String claseA = getStr("Ingresa la clase que imparte: " );
-            Trabajador.Horario horarioAyu = hacerHoraio();
+            Trabajador.Horario horarioAyu = hacerHorario();
 
             Ayudante ayudante = new Ayudante(gral.getNombre(), gral.getApellidoPaterno(), gral.getApellidoMaterno(), gral.getCurp(),
                     gral.getDireccion(), gral.getCorreoElectronico(), gral.getMatricula(), gral.getSueldo(), gral.getDiaContrat(),
@@ -254,7 +254,7 @@ public class UImenu {
         }else{
             String lugar = getStr("Ingresa el lugar de trabajo: ");
             String puesto = getStr("Ingresa el lugar de trabajo: ");
-            Trabajador.Horario horarioAd = hacerHoraio();
+            Trabajador.Horario horarioAd = hacerHorario();
 
             Trabajador adm = new Adiministrativo(gral.getNombre(), gral.getApellidoPaterno(), gral.getApellidoMaterno(),
                     gral.getCurp(),gral.getDireccion(),gral.getCorreoElectronico(),gral.getMatricula(),gral.getSueldo(),

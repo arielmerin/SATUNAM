@@ -6,6 +6,14 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.GregorianCalendar;
 
+/**
+ * <h1>Trabajador</h1>
+ *
+ * Clase cuyo uso prinicipal es proveer de atributos a las clases hija que seran especializaciones de los tipos de trabajador
+ * aqui se alojan los valores que se veran repetidos en todas las clases que usan algun registro o usuario.
+ * @authors Aquino Chapa Armando Abraham, Merino Peña Kevin Ariel
+ * @version 1
+ */
 public class Trabajador {
     private String nombre;
     private String apellidoMaterno;
@@ -20,28 +28,24 @@ public class Trabajador {
     private int mes;
     private int year;
 
+    /**
+     *  Este metodo permite acceder al valor del dia contratado
+     * @return dia contratado
+     */
     public int getDiaContrat() {
         return diaContrat;
     }
 
-    public void setDiaContrat(int diaContrat) {
-        this.diaContrat = diaContrat;
-    }
-
+    /**
+     *  Este metodo permite acceder al valor delmes
+     * @return valor del mes
+     */
     public int getMes() {
         return mes;
     }
 
-    public void setMes(int mes) {
-        this.mes = mes;
-    }
-
     public int getYear() {
         return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
     }
 
     public Trabajador(String nombre, String apellidoPaterno, String apellidoMaterno, String curp,
@@ -155,10 +159,15 @@ public class Trabajador {
             this.terminoMin = terminoMin;
 
         }
-        public static String jornada(Horario horario) {
-            int duration = horario.terminoHoras - horario.inicioHoras;
-            int durationMin = horario.terminoMin - horario.inicioMin;
-            return duration + ":" + durationMin;
+
+        @Override
+        public String toString() {
+            return "Horario{" +
+                    "inicioHoras=" + inicioHoras +
+                    ", terminoHoras=" + terminoHoras +
+                    ", inicioMin=" + inicioMin +
+                    ", terminoMin=" + terminoMin +
+                    '}';
         }
     }
 
