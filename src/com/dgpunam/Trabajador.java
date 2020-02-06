@@ -83,70 +83,74 @@ public class Trabajador {
 
     }
 
+    /**
+     * Regresara el nombre del empleado
+     * @return nombre del empleado
+     */
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
+    /**
+     * Permite ver el apellido materno
+     * @return apellido materno
+     */
     public String getApellidoMaterno() {
         return apellidoMaterno;
     }
 
-    public void setApellidoMaterno(String apellidoMaterno) {
-        this.apellidoMaterno = apellidoMaterno;
-    }
-
+    /**
+     * Permite ver el apellido paterno
+     * @return apellido paterno
+     */
     public String getApellidoPaterno() {
         return apellidoPaterno;
     }
 
-    public void setApellidoPaterno(String apellidoPaterno) {
-        this.apellidoPaterno = apellidoPaterno;
-    }
-
+    /**
+     * Permite ver el curp
+     * @return curp del empleado
+     */
     public String getCurp() {
         return curp;
     }
 
-    public void setCurp(String curp) {
-        this.curp = curp;
-    }
-
+    /**
+     * Permite acceder a la direccion
+     * @return direccion del empleado
+     */
     public String getDireccion() {
         return direccion;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
+    /**
+     * Permite acceder al correo electronico del empleado
+     * @return correo electronico
+     */
     public String getCorreoElectronico() {
         return correoElectronico;
     }
 
-    public void setCorreoElectronico(String correoElectronico) {
-        this.correoElectronico = correoElectronico;
-    }
-
+    /**
+     * Permite acceder a la matricula del trabajador
+     * @return matricula del trabajador
+     */
     public int getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(int matricula) {
-        this.matricula = matricula;
-    }
-
+    /**
+     * Permite acceder al sueldo del trabajador
+     * @return sueldo del trabajador
+     */
     public double getSueldo() {
         return sueldo;
     }
 
-    public void setSueldo(double sueldo) {
-        this.sueldo = sueldo;
-    }
-
+    /**
+     * Permite acceder a la antiguedad del trabajador
+     * @return antiguedad del trabajador
+     */
     public String getAntiguedad(){
         LocalDate ld =  LocalDate.now();
         DateTimeFormatter ftm = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -157,19 +161,31 @@ public class Trabajador {
         return "Antiguedad:" + antiguedad.getYears() +" años, " +antiguedad.getMonths() +" meses y "+ antiguedad.getDays() +" días";
     }
 
-
+    /**
+     * Permite acceder a la fecha en que fue contratado el empleado
+     * @return fecha en que se contrato
+     */
     public String getFechaContrato() {
         return fechaContrato;
     }
 
-
+    /**
+     * Esta clase interna permite la implementacion adecuada del parametro horario para los trabajadores que lo requieran
+     *
+     */
     public static class Horario{
         int inicioHoras;
         int terminoHoras;
         int inicioMin;
         int terminoMin;
 
-
+        /**
+         * Permite el correcto manejo del horario en los empleados
+         * @param inicioHoras Inicio de dos digitos
+         * @param inicioMin Inicio de la jornada en minutos
+         * @param terminoHoras Fin de la jornada en horas
+         * @param terminoMin Fin de la jornada en minutos
+         */
         public Horario(int inicioHoras, int inicioMin,  int terminoHoras, int terminoMin) {
             this.inicioHoras = inicioHoras;
             this.inicioMin = inicioMin;
@@ -202,8 +218,6 @@ public class Trabajador {
                 "  Dirección: " + direccion + "\n"+
                 "  Correo electrónico: " + correoElectronico + "\n";
 
-
-
         String logo =  "\n" +
                 " __    __  __    __   ______   __       __ \n" +
                 "|  \\  |  \\|  \\  |  \\ /      \\ |  \\     /  \\\n" +
@@ -217,6 +231,10 @@ public class Trabajador {
 
         return datosTrabajador + logo;
     }
+
+    /**
+     * Permite imprimir el cheque del empleado en un formato adecuado
+     */
     public void cheque(){
         String salarioImpuestos = "\n \n" +
                 "+--------------------------+\n" +
