@@ -11,7 +11,7 @@ import java.util.GregorianCalendar;
  *
  * Clase cuyo uso prinicipal es proveer de atributos a las clases hija que seran especializaciones de los tipos de trabajador
  * aqui se alojan los valores que se veran repetidos en todas las clases que usan algun registro o usuario.
- * @authors Aquino Chapa Armando Abraham, Merino Peña Kevin Ariel
+ * @author Aquino Chapa Armando Abraham, Merino Peña Kevin Ariel
  * @version 1
  */
 public class Trabajador {
