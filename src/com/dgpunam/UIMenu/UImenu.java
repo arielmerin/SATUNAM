@@ -11,7 +11,7 @@ import static com.dgpunam.util.DgpUnamUtil.*;
  * Clase que se encarga de mostrar el menu y a interaccion con el usuario, en general despliega menus y llama a sus
  * propios metodos para satisfacer las demandas del usuario.
  *
- * @authors Aquino Chapa Armando Abraham and Merino Peña Kevin Ariel
+ * @author Aquino Chapa Armando Abraham and Merino Peña Kevin Ariel
  * @version 1.0
  */
 public class UImenu {

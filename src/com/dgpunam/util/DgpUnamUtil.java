@@ -7,7 +7,7 @@ import java.util.Scanner;
  * <h1>Utilidadaes</h1>
  * Clase que sirve de auxiliar a menu para permitir la entrada de datos desde la terminal y realizar las validaciones
  * necesarias para el requerimiento de tipo de dato
- * @authors Aquino Chapa Armando Abraham and Ariel Merino Peña
+ * @author Aquino Chapa Armando Abraham and Ariel Merino Peña
  * @version 1
  */
 public class DgpUnamUtil {
@@ -125,7 +125,7 @@ public class DgpUnamUtil {
     /**
      * Imprime en la pantalla instrucciones al usuario para que este se encargue de proporcionar los datos que permitiran
      * crear un horario de algun empleado, ademas otorga formato a la entrada
-     * @return
+     * @return horario hecho
      */
     public static Trabajador.Horario hacerHorario(){
 
