@@ -44,10 +44,28 @@ public class Trabajador {
         return mes;
     }
 
+    /**
+     * Este metodo sirve para acceder al valor del año
+     * @return valor del año
+     */
     public int getYear() {
         return year;
     }
 
+    /**
+     * Constructor princial que permite construir objetos de tipo trabajador con los siguientes requerimientos
+     * @param nombre Nombre que se le asginara al trabajador
+     * @param apellidoPaterno Apellido que se asignara al trabajador
+     * @param apellidoMaterno Apellido materno que se asignara al trabajador
+     * @param curp Clave unica de registro de poblacion del trabajador
+     * @param direccion Domicilio del trabajador
+     * @param correoElectronico email del trabajador
+     * @param matricula numero unico de cuenta que tendra asignado el trabjadaor
+     * @param sueldo Monto que se le paga al trabjadaor por brindar sus servicios
+     * @param diaContrat Dia 1-31 en el que fue contratado el trabajador
+     * @param mes mes 1-12 en el que fue contratado
+     * @param year 1900-2020 en el que fue contratado el trabajador
+     */
     public Trabajador(String nombre, String apellidoPaterno, String apellidoMaterno, String curp,
                       String direccion, String correoElectronico, int matricula, double sueldo, int diaContrat,
                       int mes, int year) {
