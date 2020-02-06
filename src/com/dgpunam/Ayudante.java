@@ -14,7 +14,7 @@ public class Ayudante extends Trabajador {
     private Horario horario;
 
     /**
-     *
+     * Construye de manera consistente los requerimientos de unx ayudante
      * @param nombre Nombre que recibira el ayudante
      * @param apellidoPaterno Apellido que se le otorga a la (al) ayudante
      * @param apellidoMaterno Apellido materno que se le asigna al ayudante
