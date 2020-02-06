@@ -2,13 +2,22 @@ package com.dgpunam.UIMenu;
 
 import com.dgpunam.*;
 import com.dgpunam.util.ArregloDinamico;
-
 import java.io.IOException;
 import java.util.Scanner;
-
 import static com.dgpunam.util.DgpUnamUtil.*;
 
+/**
+ * <h1>CLASE MENU </h1>
+ * Clase que se encarga de mostrar el menu y a interaccion con el usuario, en general despliega menus y llama a sus
+ * propios metodos para satisfacer las demandas del usuario.
+ *
+ * @authors Aquino Chapa Armando Abraham and Merino Peña Kevin Ariel
+ * @version 1.0
+ */
 public class UImenu {
+    /**
+     * Estructura donde se guardaran los objetos de tipo empleado
+     */
     private static ArregloDinamico<Trabajador> trabajadores;
 
     static {
@@ -19,6 +28,10 @@ public class UImenu {
         }
     }
 
+    /**
+     * Menu prinicpal que permite mostrar las primeras opciones de naviegacion, obteniendo la respuesta del usuaraio
+     * ingresa a los demas metodos de la misma clase.
+     */
     public static void uiMenu(){
         String label = "/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/\n" +
                 "\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\\n" +
@@ -76,6 +89,12 @@ public class UImenu {
             }
         }while (continuar);
     }
+
+    /**
+     * En este metodo se interactua con el usuario al requerir los tipos de trabajador que se crearan para posteriormente
+     * demandar los datos correspondientes, este metodo se encarga de llamar los metodos necesarios para capturar dicha
+     * informacion desde la terminal y asignarla a un nuevo empleado.
+     */
     public static void altaMenu(){
         boolean continuar = true;
         do {
@@ -150,19 +169,41 @@ public class UImenu {
             }
         }while (continuar);
     }
+
+    /**
+     * Es el encargado de mostrar la opcion de eliminar que se encuentra contenida en el metodo uIMenu() de esta misma clase
+     * haciendo uso del numero de matricula proporcionado elimina al empleado en cuestion
+     */
     public static void eraseMenu(){
         int buscado = getInt("Ingrese la maatricula del empleado que desea eliminar",
                 "Error, ingrese un valor numerico");
         trabajadores.elimina(lookingFor(trabajadores, buscado));
     }
+
+    /**
+     * <h2>Busqueda</h2>
+     * <p>  Realiza la parte interactiva con el usuario cuando este desea buscar un empleado en la base de datos, y ademas
+     * lo imprime</p>
+     */
     public static void buscaEmpleado(){
         int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
         System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)));
     }
+
+    /**
+     * <h2>Antiguedad</h2>
+     * En esta opcion se permite visualizar la antiguedad de algun empleado y dado su numero de matricula y ademas se encarga
+     * de imprimir dicho valor
+     */
     public static void antiguedadEmpleado(){
         int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
         System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)).getAntiguedad());
     }
+
+    /**
+     * Haciendo uso de la busqueda este metodo realiza el cambio en los datos de algun empleado volviendo a pedir todos
+     * sus datos de nuevo, una vez que fue encontrado en la base de datos.
+     */
     public static void modificarEmpleado(){
 
         int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
