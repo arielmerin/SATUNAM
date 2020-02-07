@@ -19,62 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cefeb241-5bd3-443a-babe-a6a63d1ca86d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Documentacion/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/allclasses-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/allclasses-noframe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/Adiministrativo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/Adiministrativo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/Ayudante.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/Ayudante.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/Investigador.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/Investigador.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/Profesor.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/Profesor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/Trabajador.Horario.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/Trabajador.Horario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/Trabajador.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/Trabajador.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/UImenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/UImenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/Serializer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/Serializer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/ArregloDinamico.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/ArregloDinamico.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/DgpUnamUtil.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/DgpUnamUtil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/overview-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/overview-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/overview-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dgpunam/UIMenu/UImenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dgpunam/UIMenu/UImenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dgpunam/util/ArregloDinamico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dgpunam/util/ArregloDinamico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dgpunam/util/DgpUnamUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dgpunam/util/DgpUnamUtil.java" afterDir="false" />
-    </list>
+    <list default="true" id="cefeb241-5bd3-443a-babe-a6a63d1ca86d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,25 +140,25 @@
     </state>
     <state x="465" y="108" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1581031448491" />
     <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1580435177375" />
-    <state width="629" height="221" key="GridCell.Tab.0.bottom" timestamp="1581031891798">
+    <state width="1320" height="224" key="GridCell.Tab.0.bottom" timestamp="1581039955186">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="629" height="221" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1581031891798" />
+    <state width="1320" height="224" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1581039955186" />
     <state width="1320" height="560" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1580855045145" />
-    <state width="629" height="221" key="GridCell.Tab.0.center" timestamp="1581031891797">
+    <state width="1320" height="224" key="GridCell.Tab.0.center" timestamp="1581039955185">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="629" height="221" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1581031891797" />
+    <state width="1320" height="224" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1581039955185" />
     <state width="1320" height="560" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1580855045144" />
-    <state width="629" height="221" key="GridCell.Tab.0.left" timestamp="1581031891797">
+    <state width="1320" height="224" key="GridCell.Tab.0.left" timestamp="1581039955184">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="629" height="221" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1581031891797" />
+    <state width="1320" height="224" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1581039955184" />
     <state width="1320" height="560" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1580855045144" />
-    <state width="629" height="221" key="GridCell.Tab.0.right" timestamp="1581031891798">
+    <state width="1320" height="224" key="GridCell.Tab.0.right" timestamp="1581039955186">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="629" height="221" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1581031891798" />
+    <state width="1320" height="224" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1581039955186" />
     <state width="1320" height="560" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1580855045144" />
     <state x="339" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1580389419605">
       <screen x="0" y="27" width="1366" height="741" />
