@@ -21,11 +21,7 @@ public class UImenu {
     private static ArregloDinamico<Trabajador> trabajadores;
 
     static {
-        try {
-            trabajadores = new ArregloDinamico();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        trabajadores = new ArregloDinamico();
     }
 
     /**
