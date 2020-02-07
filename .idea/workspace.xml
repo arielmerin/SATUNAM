@@ -20,65 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cefeb241-5bd3-443a-babe-a6a63d1ca86d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Documentacion/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/allclasses-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/allclasses-noframe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/Adiministrativo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/Adiministrativo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/Ayudante.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/Ayudante.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/Investigador.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/Investigador.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/Profesor.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/Profesor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/Trabajador.Horario.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/Trabajador.Horario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/Trabajador.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/Trabajador.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/UImenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/UImenu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/UIMenu/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/Serializer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/Serializer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/serializer/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/ArregloDinamico.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/ArregloDinamico.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/DgpUnamUtil.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/DgpUnamUtil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/com/dgpunam/util/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/overview-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/overview-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/overview-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentacion/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentacion/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dgpunam/UIMenu/UImenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dgpunam/UIMenu/UImenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dgpunam/util/ArregloDinamico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dgpunam/util/ArregloDinamico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dgpunam/util/DgpUnamUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dgpunam/util/DgpUnamUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="SATUNAM" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -105,10 +56,10 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Practica1/practica1_EDA" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -118,7 +69,7 @@
       <recent name="com.dgpunam.util" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="DGPUNAM" />
@@ -126,6 +77,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <module name="DGPUNAM" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.Main" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -169,15 +130,32 @@
     <option name="LAST_COMMIT_MESSAGE" value="Este tiene completo los constructores de las clases principales" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="278" y="58" width="800" height="677" key="#Project_Structure" timestamp="1580249079421">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="653" y="194" width="671" height="717" key="#Main" timestamp="1581039310693">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="653" y="194" width="671" height="717" key="#Main/67.27.1853.1053@67.27.1853.1053" timestamp="1581039310693" />
+    <state x="444" y="71" width="800" height="677" key="#Project_Structure" timestamp="1581039290710">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="278" y="58" width="800" height="677" key="#Project_Structure/0.27.1366.741@0.27.1366.741" timestamp="1580249079421" />
+    <state x="444" y="71" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1581039290710" />
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581039431277">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1581039431277" />
     <state x="488" y="-14" width="546" height="649" key="#com.intellij.ide.util.MemberChooser" timestamp="1581030711558">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="488" y="-14" width="546" height="649" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1581030711558" />
     <state x="491" y="83" width="544" height="626" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1580854701019" />
+    <state x="725" y="338" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581039429654">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="725" y="338" width="525" height="428" key="#com.intellij.ide.util.TreeClassChooserDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1581039429653" />
+    <state x="834" y="444" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581039510306">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="834" y="444" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1581039510306" />
     <state x="436" y="283" width="494" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1580250126846">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -215,10 +193,11 @@
     </state>
     <state width="629" height="221" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1581031891798" />
     <state width="1320" height="560" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1580855045144" />
-    <state x="339" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1580389419605">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="527" y="307" key="com.intellij.ide.util.TipDialog" timestamp="1581039151692">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="339" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1580389419605" />
+    <state x="527" y="307" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1581039151692" />
     <state x="354" y="254" width="648" height="208" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1581008743633">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
