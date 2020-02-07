@@ -7,7 +7,7 @@ import static com.dgpunam.UIMenu.UImenu.uiMenu;
  */
 public class Main {
     /**
-     * Entrada principal de la aplicacion
+     * Entrada principal de la aplicacion, comentarios adicionales en las clases restantes
      * @param args supplied command-line arguments as an array of String objects
      * @see String
      */
