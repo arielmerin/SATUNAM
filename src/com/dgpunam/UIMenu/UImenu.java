@@ -15,14 +15,7 @@ import static com.dgpunam.util.DgpUnamUtil.*;
  * @version 1.0
  */
 public class UImenu {
-    /**
-     * Estructura donde se guardaran los objetos de tipo empleado
-     */
-    private static ArregloDinamico<Trabajador> trabajadores;
-
-    static {
-        trabajadores = new ArregloDinamico();
-    }
+    private static ArregloDinamico<Trabajador> trabajadores = new ArregloDinamico();
 
     /**
      * Menu prinicpal que permite mostrar las primeras opciones de naviegacion, obteniendo la respuesta del usuaraio
@@ -30,7 +23,6 @@ public class UImenu {
      */
     public static void uiMenu(){
         Serializer q = new Serializer();
-        ArregloDinamico<Trabajador> datos = new ArregloDinamico<Trabajador>();
         String label = "/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/\n" +
                 "\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\\n" +
                 "/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/\n" +
@@ -38,6 +30,7 @@ public class UImenu {
 
 
         System.out.println( label + " BIENVENIDO A DGP UNAM \n");
+        trabajadores = q.read("Base_Datos");
         boolean continuar = true;
         do {
             try {
@@ -80,13 +73,13 @@ public class UImenu {
                         break;
                     case 0:
                         System.out.println("¡¡¡Hasta pronto!!!\n\n" + label);
-                        q.write(datos, "Base_Datos");
+                        q.write(trabajadores, "Base_Datos");
                         continuar = false;
                         break;
                     default:
                         System.out.println("Error, seleccione una opción válida\n");
                 }
-                q.write(datos, "Base_Datos");
+                q.write(trabajadores, "Base_Datos");
             }catch(NullPointerException e){
                 System.out.println(">>No se ha actualizado la base de datos<<<");
             }
@@ -100,6 +93,7 @@ public class UImenu {
      */
     public static void altaMenu(){
         boolean continuar = true;
+        System.out.println(trabajadores);
         do {
             System.out.println("Ingrese una opción válida");
             System.out.println("[1] Investigador");

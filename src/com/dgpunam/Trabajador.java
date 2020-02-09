@@ -174,7 +174,7 @@ public class Trabajador implements Serializable {
      * Esta clase interna permite la implementacion adecuada del parametro horario para los trabajadores que lo requieran
      *
      */
-    public static class Horario{
+    public static class Horario implements Serializable{
         int inicioHoras;
         int terminoHoras;
         int inicioMin;
