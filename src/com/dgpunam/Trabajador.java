@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.GregorianCalendar;
+import java.io.Serializable;
 
 /**
  * <h1>Trabajador</h1>
@@ -14,7 +15,7 @@ import java.util.GregorianCalendar;
  * @author Aquino Chapa Armando Abraham, Merino Peña Kevin Ariel
  * @version 1
  */
-public class Trabajador {
+public class Trabajador implements Serializable {
     private String nombre;
     private String apellidoMaterno;
     private String apellidoPaterno;

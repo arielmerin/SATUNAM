@@ -2,12 +2,11 @@ package com.dgpunam.util; /**
  *
  * @author Ariel Merino Peña
  */
-
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
+import com.dgpunam.*;
 import java.util.Iterator;
-
 
 public class ArregloDinamico<T> implements Iterable<T>, Serializable {
 
