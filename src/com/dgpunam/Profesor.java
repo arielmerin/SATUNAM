@@ -41,4 +41,15 @@ public class Profesor extends Trabajador {
         this.nivelProf = nivelProf;
         this.titulo = titulo;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n\n:::Profesor:::\n" +
+                "facultad: '" + facultad + '\n' +
+                ", clase: '" + clase + '\n' +
+                ", horario: " + horario +
+                ", nivelProf: '" + nivelProf + '\n' +
+                ", titulo: '" + titulo + '\n' +
+                '\n';
+    }
 }

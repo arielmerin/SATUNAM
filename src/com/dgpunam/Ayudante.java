@@ -43,43 +43,14 @@ public class Ayudante extends Trabajador {
         this.facultad = facultad;
     }
 
-    /**
-     * Tiene que regresar la facultad a la que pertenece (la) el ayudante
-     * @return facultad a la que pertenece la (el) ayudante
-     */
-    public String getFacultad() {
-        return facultad;
-    }
-
-    /**
-     * Permite acceder el numero de creditos de la (el) ayudante
-     * @return porcentaje de creditos
-     */
-    public int getCreditos() {
-        return creditos;
-    }
-
-    /**
-     * Permite concoer si la (el) ayudante esta titulado
-     * @return valor de preguntar si esta titulado o no
-     */
-    public boolean isEstaTitulado() {
-        return estaTitulado;
-    }
-
-    /**
-     * Regeresa la materia que imparte
-     * @return materia en la que es ayudante
-     */
-    public String getClase() {
-        return clase;
-    }
-
-    /**
-     * Permite obtener el horario de la (el ) ayudante
-     * @return horario de la (el) ayudante
-     */
-    public Horario getHorario() {
-        return horario;
+    @Override
+    public String toString() {
+        return super.toString() + "\n\n:::Ayudante:::\n" +
+                "facultad: '" + facultad + '\n' +
+                ", creditos: " + creditos +
+                ", estaTitulado=" + estaTitulado +
+                ", clase='" + clase + '\n' +
+                ", horario=" + horario +
+                '\n';
     }
 }

@@ -30,7 +30,7 @@ public class UImenu {
 
 
         System.out.println( label + " BIENVENIDO A DGP UNAM \n");
-        trabajadores = q.read("Base_Datos");
+        trabajadores = q.read("Base_Datos.ser");
         boolean continuar = true;
         do {
             try {
@@ -73,13 +73,13 @@ public class UImenu {
                         break;
                     case 0:
                         System.out.println("¡¡¡Hasta pronto!!!\n\n" + label);
-                        q.write(trabajadores, "Base_Datos");
+                        q.write(trabajadores, "Base_Datos.ser");
                         continuar = false;
                         break;
                     default:
                         System.out.println("Error, seleccione una opción válida\n");
                 }
-                q.write(trabajadores, "Base_Datos");
+                q.write(trabajadores, "Base_Datos.ser");
             }catch(NullPointerException e){
                 System.out.println(">>No se ha actualizado la base de datos<<<");
             }

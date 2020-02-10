@@ -36,67 +36,12 @@ public class Investigador extends Trabajador {
         this.nivelSNI = nivelSNI;
     }
 
-    /**
-     * Permite acceder a la facultad delx Investigadorx
-     * @return facultad donde labora
-     */
-    public String getFacultad() {
-        return facultad;
-    }
-
-    /**
-     * Permite acceder al nivel de Investigadorx
-     * @return nivel de investigadrx
-     */
-    public String getNivelInv() {
-        return nivelInv;
-    }
-
-    /**
-     * Permite acceder al nivel que tiene en el sistema nacional de investigadorxs
-     * @return nivel en el SNI
-     */
-    public String getNivelSNI() {
-        return nivelSNI;
-    }
-
     @Override
-    public String getNombre() {
-        return super.getNombre();
-    }
-
-    @Override
-    public String getApellidoMaterno() {
-        return super.getApellidoMaterno();
-    }
-
-    @Override
-    public String getApellidoPaterno() {
-        return super.getApellidoPaterno();
-    }
-
-    @Override
-    public String getCurp() {
-        return super.getCurp();
-    }
-
-    @Override
-    public String getDireccion() {
-        return super.getDireccion();
-    }
-
-    @Override
-    public String getCorreoElectronico() {
-        return super.getCorreoElectronico();
-    }
-
-    @Override
-    public int getMatricula() {
-        return super.getMatricula();
-    }
-
-    @Override
-    public double getSueldo() {
-        return super.getSueldo();
+    public String toString() {
+        return super.toString() +"\n\n:::Investigador:::\n" +
+                "facultad='" + facultad + '\n' +
+                ", nivelInv='" + nivelInv + '\n' +
+                ", nivelSNI='" + nivelSNI + '\n' +
+                '\n';
     }
 }

@@ -35,61 +35,11 @@ public class Adiministrativo extends Trabajador {
         this.puesto = puesto;
     }
 
-    /**
-     * Permite acceder el lugar de trabajo de lx adminsitradorx
-     * @return lugar de trabajo
-     */
-    public String getLugarTrabajo() {
-        return lugarTrabajo;
-    }
-
-    /**
-     * Permite acceder al puesto de lx administradorx
-     * @return lugar de trabajo
-     */
-    public String getPuesto() {
-        return puesto;
-    }
-
-
     @Override
-    public String getApellidoMaterno() {
-        return super.getApellidoMaterno();
+    public String toString() {
+        return super.toString() + "Adiministrativo\n" +
+                "lugarTrabajo: '" + lugarTrabajo + '\n' +
+                ", puesto: '" + puesto + '\n' +
+                ", horario: " + horario  + "\n";
     }
-
-    @Override
-    public String getApellidoPaterno() {
-        return super.getApellidoPaterno();
-    }
-
-    @Override
-    public String getCurp() {
-        return super.getCurp();
-    }
-
-    @Override
-    public String getDireccion() {
-        return super.getDireccion();
-    }
-
-    @Override
-    public String getCorreoElectronico() {
-        return super.getCorreoElectronico();
-    }
-
-    @Override
-    public int getMatricula() {
-        return super.getMatricula();
-    }
-
-    @Override
-    public double getSueldo() {
-        return super.getSueldo();
-    }
-
-    @Override
-    public String getFechaContrato() {
-        return super.getFechaContrato();
-    }
-
 }
