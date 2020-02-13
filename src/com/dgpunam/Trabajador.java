@@ -1,5 +1,7 @@
 package com.dgpunam;
 
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
@@ -246,5 +248,6 @@ public class Trabajador implements Serializable {
                 " Total:  $ "+  String.format("%.02f",sueldo-540.36) + "\n";
         System.out.println(salarioImpuestos);
     }
+
 }
 

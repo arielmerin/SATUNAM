@@ -10,22 +10,23 @@ import com.dgpunam.util.ArregloDinamico;
 public class Serializer {
     /**
      * Metodo que crea un flujo de salida y almacena objetos en archivos
-     * @param a Objeto que queremos almacenar
+     * @param arregloDinamico Objeto que queremos almacenar
      * @param ruta Nombre del archivo donde se almacenaran nuestros objetos
      */
-    public void write(ArregloDinamico<Trabajador> a, String ruta){
-        FileOutputStream file;
+    public void write(ArregloDinamico arregloDinamico, String ruta){
         ObjectOutputStream writer = null;
         try{
-            file = new FileOutputStream(ruta);
-            writer = new ObjectOutputStream(file);
-            writer.writeObject(a);
-        }catch(NotSerializableException e){
-            System.out.println(e);
+            writer = new ObjectOutputStream(new FileOutputStream(ruta));
+            writer.writeObject(arregloDinamico);
+        }catch(NotSerializableException exc){
+            System.out.println(exc);
+            System.out.println("Primera Excepecion dentro de los write");
         }catch(FileNotFoundException e){
             System.out.println(e);
+            System.out.println("Segunda excepcion en los write");
         }catch(IOException e){
             System.out.println(e);
+            System.out.println("Tercera escepcion en los write");
         }finally{
             if(writer == null){
                 System.out.println("El archivo no esta abierto");
@@ -34,6 +35,7 @@ public class Serializer {
                     writer.close();
                 }catch(IOException e){
                     System.out.println(e);
+                    System.out.println("NO se puedo cerrar el documento");
                 }
             }
         }
@@ -41,17 +43,15 @@ public class Serializer {
 
     /**
      * Metodo que crea un flujo de entrada para leer objetos almacenados
-     * @param cad Nombre donde estan almacenados los objetos a los que queremos acceder
+     * @param cadena Nombre donde estan almacenados los objetos a los que queremos acceder
      * @return Conjunto guardado en el archivo
      */
-    public ArregloDinamico<Trabajador> read(String cad){
+    public ArregloDinamico<Investigador> read(String cadena){
         ObjectInputStream in = null;
-        FileInputStream input;
-        ArregloDinamico<Trabajador> obj = null;
+        ArregloDinamico<Investigador> obj = null;
         try{
-            input = new FileInputStream(cad);
-            in = new ObjectInputStream(input);
-            obj = (ArregloDinamico<Trabajador>)in.readObject();
+            in = new ObjectInputStream(new FileInputStream(cadena));
+            obj = (ArregloDinamico<Investigador>)in.readObject();
         }catch(EOFException e){
             System.out.println("Fin del archivo");
         }catch(FileNotFoundException e){
@@ -63,7 +63,7 @@ public class Serializer {
         }finally{
             if(in == null){
                 System.out.println("Nuevo archivo creado");
-                write(obj, cad);
+                write(obj, cadena);
             }else{
                 try{
                     in.close();

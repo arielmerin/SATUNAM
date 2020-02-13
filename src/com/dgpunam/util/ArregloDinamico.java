@@ -54,7 +54,7 @@ public class ArregloDinamico<T> implements Iterable<T>, Serializable {
         /**
          * Crear un arreglo de este tamaño
          */
-        this(2);
+        this(20);
     }
 
     /**
@@ -75,18 +75,14 @@ public class ArregloDinamico<T> implements Iterable<T>, Serializable {
      * @param elem elemento que se encargara de agregar
      */
     public void agrega(T elem) {
-        /**
-         * No debe de haber huecos en el arreglo
-         * si se nos acaba el espacio hay que crecer el arreglo
-         */
         if (elementos == arreglo.length-1){
             T[] a = (T[])new Object[elementos+2];
             for (int i = 0; i < arreglo.length ; i++) {
                 a[i] = arreglo[i];
             }
-            this.arreglo = a;
+            arreglo = a;
         }
-        this.arreglo[elementos] = elem;
+        arreglo[elementos] = elem;
         elementos++;
     }
 

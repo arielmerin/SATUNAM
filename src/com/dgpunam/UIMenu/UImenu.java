@@ -15,73 +15,67 @@ import static com.dgpunam.util.DgpUnamUtil.*;
  * @version 1.0
  */
 public class UImenu {
-    private static ArregloDinamico<Trabajador> trabajadores = new ArregloDinamico();
+    static Serializer serializer = new Serializer();
+    static String ruta = "Base_Datos.dat";
+    static ArregloDinamico<Investigador> investigadors = new ArregloDinamico<>(50);
 
     /**
      * Menu prinicpal que permite mostrar las primeras opciones de naviegacion, obteniendo la respuesta del usuaraio
      * ingresa a los demas metodos de la misma clase.
      */
     public static void uiMenu(){
-        Serializer q = new Serializer();
         String label = "/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/\n" +
                 "\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\\n" +
                 "/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/\n" +
                 "\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\ \n\n";
-
-
         System.out.println( label + " BIENVENIDO A DGP UNAM \n");
-        trabajadores = q.read("Base_Datos.ser");
+        System.out.println("Esto es al inicio al intentar leer el archivo");
+        investigadors = serializer.read(ruta);
+        System.out.println(investigadors);
         boolean continuar = true;
         do {
-            try {
-                System.out.println(" :: MENÚ PRINCIPAL ::   \n");
-                System.out.println(" [1] Dar de alta un empleado \n");
-                System.out.println(" [2] Dar de baja un empleado \n");
-                System.out.println(" [3] Ver los datos de un empleado, (proporcionando su matricula) \n");
-                System.out.println(" [4] Imrpmir cheque de un empleado (proporcionando su matricula)\n");
-                System.out.println(" [5] Ver antigüedad de un empleado (proporcionando su matricula)\n");
-                System.out.println(" [6] Modificar algún empleado (proporcionando su matricula)\n");
-                System.out.println(" [0] Salir \n");
+            System.out.println(" :: MENÚ PRINCIPAL ::   \n");
+            System.out.println(" [1] Dar de alta un empleado \n");
+            System.out.println(" [2] Dar de baja un empleado \n");
+            System.out.println(" [3] Ver los datos de un empleado, (proporcionando su matricula) \n");
+            System.out.println(" [4] Imrpmir cheque de un empleado (proporcionando su matricula)\n");
+            System.out.println(" [5] Ver antigüedad de un empleado (proporcionando su matricula)\n");
+            System.out.println(" [6] Modificar algún empleado (proporcionando su matricula)\n");
+            System.out.println(" [0] Salir \n");
 
-                int answer = getInt(" Seleccione la opción deseada: ", "Error, ingrese un valor válido");
-                switch (answer) {
-                    case 1:
-                        System.out.println(" :: ALTA DE EMPLEADOS ::");
-                        altaMenu();
-                        break;
-                    case 2:
-                        System.out.println(" :: BAJA DE EMPLEADOS :: ");
-                        eraseMenu();
-                        break;
-                    case 3:
-                        System.out.println(" :: CONSULTAR DATOS ::  ");
-                        buscaEmpleado();
-                        break;
-                    case 4:
-                        System.out.println(" :: IMPRMIR CHEQUE ::  ");
-                        int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
-                        Trabajador tab = trabajadores.busca(lookingFor(trabajadores, matricula));
-                        tab.cheque();
-                        break;
-                    case 5:
-                        System.out.println(":: ANTIGÜEDAD ::  ");
-                        antiguedadEmpleado();
-                        break;
-                    case 6:
-                        System.out.println(":: MODIFICAR EMPLEADO ::  ");
-                        modificarEmpleado();
-                        break;
-                    case 0:
-                        System.out.println("¡¡¡Hasta pronto!!!\n\n" + label);
-                        q.write(trabajadores, "Base_Datos.dat");
-                        continuar = false;
-                        break;
-                    default:
-                        System.out.println("Error, seleccione una opción válida\n");
-                }
-                q.write(trabajadores, "Base_Datos.dat");
-            }catch(NullPointerException e){
-                System.out.println(">>No se ha actualizado la base de datos<<<");
+            int answer = getInt(" Seleccione la opción deseada: ", "Error, ingrese un valor válido");
+            switch (answer) {
+                case 1:
+                    System.out.println(" :: ALTA DE EMPLEADOS ::");
+                    altaMenu();
+                    break;
+                case 2:
+                    System.out.println(" :: BAJA DE EMPLEADOS :: ");
+                    eraseMenu();
+                    break;
+                case 3:
+                    System.out.println(" :: CONSULTAR DATOS ::  ");
+                    buscaEmpleado();
+                    break;
+                case 4:
+                    System.out.println(" :: IMPRMIR CHEQUE ::  ");
+                    int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
+                    break;
+                case 5:
+                    System.out.println(":: ANTIGÜEDAD ::  ");
+                    antiguedadEmpleado();
+                    break;
+                case 6:
+                    System.out.println(":: MODIFICAR EMPLEADO ::  ");
+                    modificarEmpleado();
+                    break;
+                case 0:
+                    System.out.println("¡¡¡Hasta pronto!!!\n\n" + label);
+                    serializer.write(investigadors, ruta);
+                    continuar = false;
+                    break;
+                default:
+                    System.out.println("Error, seleccione una opción válida\n");
             }
         }while (continuar);
     }
@@ -93,7 +87,7 @@ public class UImenu {
      */
     public static void altaMenu(){
         boolean continuar = true;
-        System.out.println(trabajadores);
+        System.out.println(investigadors);
         do {
             System.out.println("Ingrese una opción válida");
             System.out.println("[1] Investigador");
@@ -113,9 +107,10 @@ public class UImenu {
                     Investigador arielin = new Investigador(inv.getNombre(),inv.getApellidoPaterno(),inv.getApellidoMaterno(),
                             inv.getCurp(),inv.getDireccion(), inv.getCorreoElectronico(),inv.getMatricula(), inv.getSueldo(),
                             inv.getDiaContrat(), inv.getMes(), inv.getYear(), facultity, nivelInve, nivelSni);
-
-                    trabajadores.agrega(arielin);
-                    System.out.println(trabajadores);
+                    System.out.println(arielin);
+                    investigadors.agrega(arielin);
+                    serializer.write(investigadors, "Base_Datos.dat");
+                    System.out.println(investigadors);
                     break;
                 case 2:
                     Trabajador prof = menuAltaGralTrabajador();
@@ -132,7 +127,6 @@ public class UImenu {
                             prof.getSueldo(), prof.getDiaContrat(), prof.getMes(), prof.getYear(), facultityProfe,
                             claseP, horarioProf, nivelProf, tituloProf);
 
-                    trabajadores.agrega(profe);
                     break;
                 case 3:
                     Trabajador ayu = menuAltaGralTrabajador();
@@ -147,7 +141,7 @@ public class UImenu {
                             ayu.getDireccion(), ayu.getCorreoElectronico(), ayu.getMatricula(), ayu.getSueldo(), ayu.getDiaContrat(),
                             ayu.getMes(), ayu.getYear(), facultityAyu, creditos, titulado, claseA, horarioAyu);
 
-                    trabajadores.agrega(ayud);
+                    //trabajadores.agrega(ayud);
                     break;
                 case 4:
                     Trabajador admin = menuAltaGralTrabajador();
@@ -159,7 +153,7 @@ public class UImenu {
                             admin.getCurp(),admin.getDireccion(),admin.getCorreoElectronico(),admin.getMatricula(),admin.getSueldo(),
                             admin.getDiaContrat(),admin.getMes(),admin.getYear(),lugar,puesto,horarioAd);
 
-                    trabajadores.agrega(adm);
+                    //trabajadores.agrega(adm);
                 case 0:
                     System.out.println("Volviendo al menú principal...\n");
                     continuar = false;
@@ -174,7 +168,7 @@ public class UImenu {
     public static void eraseMenu(){
         int buscado = getInt("Ingrese la maatricula del empleado que desea eliminar",
                 "Error, ingrese un valor numerico");
-        trabajadores.elimina(lookingFor(trabajadores, buscado));
+        //trabajadores.elimina(lookingFor(trabajadores, buscado));
     }
 
     /**
@@ -184,7 +178,7 @@ public class UImenu {
      */
     public static void buscaEmpleado(){
         int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
-        System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)));
+        //System.out.println(investigadors.busca(lookingFor((ArregloDinamico<Trabajador>) investigadors, matricula)));
     }
 
     /**
@@ -194,7 +188,7 @@ public class UImenu {
      */
     public static void antiguedadEmpleado(){
         int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
-        System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)).getAntiguedad());
+        //System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)).getAntiguedad());
     }
 
     /**
@@ -204,8 +198,8 @@ public class UImenu {
     public static void modificarEmpleado(){
 
         int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
-        int indice = lookingFor(trabajadores, matricula);
-        Trabajador modificaTrabajador = trabajadores.busca(indice);
+        //int indice = lookingFor(investigadors, matricula);
+        Trabajador modificaTrabajador = investigadors.busca(2);
         System.out.println("Este es el empleado a modificar: \n" + modificaTrabajador);
         Trabajador gral = menuAltaGralTrabajador();
         Scanner scan = new Scanner(System.in);
@@ -223,7 +217,7 @@ public class UImenu {
                     gral.getSueldo(), gral.getDiaContrat(), gral.getMes(), gral.getYear(), facultityProfe,
                     claseP, horarioProf, nivelProf, tituloProf);
 
-            trabajadores.agrega(profe, indice);
+            //trabajadores.agrega(profe, indice);
         }else if(modificaTrabajador instanceof Ayudante){
             String facultityAyu = getStr("Ingrese la facultad a la que pertenece el profesor: ");
             int creditos = getInt("Ingrese los creditos del ayudante: ", "Errorm ingrese valores numericos");
@@ -236,7 +230,7 @@ public class UImenu {
                     gral.getDireccion(), gral.getCorreoElectronico(), gral.getMatricula(), gral.getSueldo(), gral.getDiaContrat(),
                     gral.getMes(), gral.getYear(), facultityAyu, creditos, titulado, claseA, horarioAyu);
 
-            trabajadores.agrega(ayudante, indice);
+            //trabajadores.agrega(ayudante, indice);
 
         }else if (modificaTrabajador instanceof Investigador){
             String facultity = getStr("Ingrese la facultad a la que pertenece el investigador: ");
@@ -247,7 +241,7 @@ public class UImenu {
                     gral.getCurp(),gral.getDireccion(), gral.getCorreoElectronico(),gral.getMatricula(), gral.getSueldo(),
                     gral.getDiaContrat(), gral.getMes(), gral.getYear(), facultity, nivelInve, nivelSni);
 
-            trabajadores.agrega(investigador, indice);
+            //trabajadores.agrega(investigador, indice);
         }else{
             String lugar = getStr("Ingresa el lugar de trabajo: ");
             String puesto = getStr("Ingresa el lugar de trabajo: ");
@@ -257,10 +251,10 @@ public class UImenu {
                     gral.getCurp(),gral.getDireccion(),gral.getCorreoElectronico(),gral.getMatricula(),gral.getSueldo(),
                     gral.getDiaContrat(),gral.getMes(),gral.getYear(),lugar,puesto,horarioAd);
 
-            trabajadores.agrega(adm, indice);
+            //trabajadores.agrega(adm, indice);
         }
 
-        System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)));
+        //System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)));
     }
 
 }
