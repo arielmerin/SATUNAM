@@ -78,6 +78,7 @@ public class UImenu {
                         break;
                     default:
                         System.out.println("Error, seleccione una opción válida\n");
+                        break;
                 }
                 q.write(trabajadores, "Base_Datos.ser");
             }catch(NullPointerException e){
@@ -116,6 +117,7 @@ public class UImenu {
 
                     trabajadores.agrega(arielin);
                     System.out.println(trabajadores);
+
                     break;
                 case 2:
                     Trabajador prof = menuAltaGralTrabajador();
@@ -133,6 +135,8 @@ public class UImenu {
                             claseP, horarioProf, nivelProf, tituloProf);
 
                     trabajadores.agrega(profe);
+                    System.out.println(trabajadores);
+
                     break;
                 case 3:
                     Trabajador ayu = menuAltaGralTrabajador();
@@ -148,6 +152,8 @@ public class UImenu {
                             ayu.getMes(), ayu.getYear(), facultityAyu, creditos, titulado, claseA, horarioAyu);
 
                     trabajadores.agrega(ayud);
+                    System.out.println(trabajadores);
+                    System.out.println("Base de datos actualizada");
                     break;
                 case 4:
                     Trabajador admin = menuAltaGralTrabajador();
@@ -160,6 +166,8 @@ public class UImenu {
                             admin.getDiaContrat(),admin.getMes(),admin.getYear(),lugar,puesto,horarioAd);
 
                     trabajadores.agrega(adm);
+                    System.out.println(trabajadores);
+                    
                 case 0:
                     System.out.println("Volviendo al menú principal...\n");
                     continuar = false;

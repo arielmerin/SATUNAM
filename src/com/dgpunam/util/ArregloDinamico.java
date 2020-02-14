@@ -5,6 +5,7 @@ package com.dgpunam.util; /**
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
+import com.dgpunam.Trabajador;
 import com.dgpunam.*;
 import java.util.Iterator;
 
