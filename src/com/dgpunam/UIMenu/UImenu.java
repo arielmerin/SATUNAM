@@ -73,14 +73,14 @@ public class UImenu {
                         break;
                     case 0:
                         System.out.println("¡¡¡Hasta pronto!!!\n\n" + label);
-                        q.write(trabajadores, "Base_Datos.ser");
+                        q.write(trabajadores, "Base_Datos.dat");
                         continuar = false;
                         break;
                     default:
                         System.out.println("Error, seleccione una opción válida\n");
                         break;
                 }
-                q.write(trabajadores, "Base_Datos.ser");
+                q.write(trabajadores, "Base_Datos.dat");
             }catch(NullPointerException e){
                 System.out.println(">>No se ha actualizado la base de datos<<<");
             }
