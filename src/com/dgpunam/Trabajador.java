@@ -199,12 +199,10 @@ public class Trabajador implements Serializable {
 
         @Override
         public String toString() {
-            return "Horario{" +
-                    "inicioHoras=" + inicioHoras +
-                    ", terminoHoras=" + terminoHoras +
-                    ", inicioMin=" + inicioMin +
-                    ", terminoMin=" + terminoMin +
-                    '}';
+            return  "Inicio " + inicioHoras +
+                    ":" + terminoHoras +
+                    " Termina " + inicioMin +
+                    ":" + terminoMin + "\n";
         }
     }
 

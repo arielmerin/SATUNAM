@@ -13,7 +13,7 @@ public class Serializer {
      * @param arregloDinamico Objeto que queremos almacenar
      * @param ruta Nombre del archivo donde se almacenaran nuestros objetos
      */
-    public void write(ArregloDinamico arregloDinamico, String ruta){
+    public void write(Object arregloDinamico, String ruta){
         ObjectOutputStream writer = null;
         try{
             writer = new ObjectOutputStream(new FileOutputStream(ruta));
@@ -46,12 +46,12 @@ public class Serializer {
      * @param cadena Nombre donde estan almacenados los objetos a los que queremos acceder
      * @return Conjunto guardado en el archivo
      */
-    public ArregloDinamico<Investigador> read(String cadena){
+    public Object read(String cadena){
         ObjectInputStream in = null;
-        ArregloDinamico<Investigador> obj = null;
+        Object obj = null;
         try{
             in = new ObjectInputStream(new FileInputStream(cadena));
-            obj = (ArregloDinamico<Investigador>)in.readObject();
+            obj = in.readObject();
         }catch(EOFException e){
             System.out.println("Fin del archivo");
         }catch(FileNotFoundException e){

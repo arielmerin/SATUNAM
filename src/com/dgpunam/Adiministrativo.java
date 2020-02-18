@@ -38,8 +38,8 @@ public class Adiministrativo extends Trabajador {
     @Override
     public String toString() {
         return super.toString() + "Adiministrativo\n" +
-                "lugarTrabajo: '" + lugarTrabajo + '\n' +
-                ", puesto: '" + puesto + '\n' +
-                ", horario: " + horario  + "\n";
+                "Labora en: " + lugarTrabajo + '\n' +
+                "Puesto: " + puesto + '\n' +
+                "Horario: " + horario  + "\n";
     }
 }

@@ -87,7 +87,7 @@ public class DgpUnamUtil {
      */
     public static Trabajador menuAltaGralTrabajador(){
         Scanner scan = new Scanner(System.in);
-        String nombre = getStr("Ingrese el nombre del investigador: ");
+        String nombre = getStr("Ingrese el nombre del Trabajador: ");
         System.out.println("Este es el nombre que le asignó: " + nombre);
 
         String apellidoPaterno = getStr("Ingresse el apellido paterno: ");
@@ -96,11 +96,11 @@ public class DgpUnamUtil {
         String apellidoMaterno = getStr("Ingrese el apellido materno: ");
         System.out.println("Apellido paterno asignado " + apellidoMaterno);
 
-        System.out.println("Ingresa el curp del investigador: ");
+        System.out.println("Ingresa el curp del Trabajador: ");
         String curp = scan.nextLine();
         System.out.println("El curp ingresado fue: " + curp);
 
-        System.out.println("Ingresa el domicilio del investigador: ");
+        System.out.println("Ingresa el domicilio del Trabajador: ");
         String direccion = scan.nextLine();
         System.out.println("La dirección ingresada fue: "+ direccion );
 
