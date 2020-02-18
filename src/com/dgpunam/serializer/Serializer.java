@@ -29,13 +29,10 @@ public class Serializer {
             writer.writeObject(arregloDinamico);
         }catch(NotSerializableException exc){
             System.out.println(exc);
-            System.out.println("Primera Excepecion dentro de los write");
         }catch(FileNotFoundException e){
             System.out.println(e);
-            System.out.println("Segunda excepcion en los write");
         }catch(IOException e){
             System.out.println(e);
-            System.out.println("Tercera escepcion en los write");
         }finally{
             if(writer == null){
                 System.out.println("El archivo no esta abierto");

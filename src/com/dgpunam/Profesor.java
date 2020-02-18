@@ -47,9 +47,9 @@ public class Profesor extends Trabajador {
         return super.toString() + "\n\n:::Profesor:::\n" +
                  getNombre() +" estudio en: " + facultad + '\n' +
                 "Imparte la clase: " + clase + '\n' +
-                "En un horario de : " + horario +
+                "En un horario de: " + horario +
                 "Nivel de profesor: " + nivelProf + '\n' +
-                "Titulo : " + titulo + '\n' +
+                "Titulo: " + titulo + '\n' +
                 '\n';
     }
 }

@@ -129,22 +129,6 @@ public class ArregloDinamico<T> implements Iterable<T>, Serializable {
         return result;
     }
 
-    /**
-     * Método para saber si un elemento esta en el arreglo dinámico, devuelve
-     * true si esta en el arreglo, false en otro caso.
-     *
-     * @param elem elemento con el cual se hara la busqueda
-     * @return regresa el booleano true si lo encontro en otro caso false
-     */
-    public boolean contiene(T elem) {
-        for (int i = 0; i < elementos; i++){
-            if (busca(i).equals(elem)){
-                return true;
-            }
-        }
-        return false;
-    }
-
     @Override
     public Iterator<T> iterator() {
         return new Iterador();
