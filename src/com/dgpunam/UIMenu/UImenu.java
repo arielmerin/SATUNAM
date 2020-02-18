@@ -24,11 +24,10 @@ public class UImenu {
      * ingresa a los demas metodos de la misma clase.
      */
     public static void uiMenu(){
+        trabajadorArregloDinamico = (ArregloDinamico<Trabajador>) serializer.read(ruta);
         String label = "/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/\n" +
                 "\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\ \n";
         System.out.println( label + " BIENVENIDO A DGP UNAM \n");
-        System.out.println(trabajadorArregloDinamico);
-        //trabajadorArregloDinamico = (ArregloDinamico<Trabajador>) serializer.read(ruta);
         boolean continuar = true;
         do {
             System.out.println(" :: MENÚ PRINCIPAL ::   \n");
@@ -57,7 +56,7 @@ public class UImenu {
                 case 4:
                     System.out.println(" :: IMPRMIR CHEQUE ::  ");
                     int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
-                    trabajadorArregloDinamico.busca(lookingFor(trabajadorArregloDinamico,matricula)).cheque();
+                    System.out.println(trabajadorArregloDinamico.busca(lookingFor(trabajadorArregloDinamico,matricula)) == null ? "Hello nada por aqui" : trabajadorArregloDinamico.busca(lookingFor(trabajadorArregloDinamico,matricula)).cheque());;
                     break;
                 case 5:
                     System.out.println(":: ANTIGÜEDAD ::  ");
@@ -68,12 +67,12 @@ public class UImenu {
                     modificarEmpleado();
                     break;
                 case 0:
-                    System.out.println("¡¡¡Hasta pronto!!!\n\n" + label);
                     serializer.write(trabajadorArregloDinamico, ruta);
+                    System.out.println("¡¡¡Hasta pronto!!!\n\n" + label);
                     continuar = false;
                     break;
                 case 7:
-                    System.out.println(trabajadorArregloDinamico != null ? trabajadorArregloDinamico : "La lista se ementra vacia");
+                    System.out.println(trabajadorArregloDinamico != null ? trabajadorArregloDinamico : "La lista se encuentra vacia");
                     break;
                 default:
                     System.out.println("Error, seleccione una opción válida\n");
@@ -104,9 +103,20 @@ public class UImenu {
                     String nivelInve = getStr("Ingrese el nivel de investigador: ");
                     String nivelSni = getStr("Ingrese la categoría en el SNI");
 
-                    Investigador investigador = new Investigador(inv.getNombre(),inv.getApellidoPaterno(),inv.getApellidoMaterno(),
-                            inv.getCurp(),inv.getDireccion(), inv.getCorreoElectronico(),inv.getMatricula(), inv.getSueldo(),
-                            inv.getDiaContrat(), inv.getMes(), inv.getYear(), facultity, nivelInve, nivelSni);
+                    Investigador investigador = new Investigador(inv.getNombre(),
+                            inv.getApellidoPaterno(),
+                            inv.getApellidoMaterno(),
+                            inv.getCurp(),
+                            inv.getDireccion(),
+                            inv.getCorreoElectronico(),
+                            inv.getMatricula(),
+                            inv.getSueldo(),
+                            inv.getDiaContrat(),
+                            inv.getMes(),
+                            inv.getYear(),
+                            facultity,
+                            nivelInve,
+                            nivelSni);
                     System.out.println(investigador);
                     trabajadorArregloDinamico.agrega(investigador);
                     serializer.write(trabajadorArregloDinamico, "Base_Datos.dat");
@@ -121,12 +131,25 @@ public class UImenu {
                     System.out.print("Ingresa el titulo del profesor: ");
                     String tituloProf = scan.nextLine();
 
-                    Profesor profe = new Profesor(prof.getNombre(),prof.getApellidoPaterno(), prof.getApellidoMaterno(),
-                            prof.getCurp(), prof.getDireccion(), prof.getCorreoElectronico(), prof.getMatricula(),
-                            prof.getSueldo(), prof.getDiaContrat(), prof.getMes(), prof.getYear(), facultityProfe,
-                            claseP, horarioProf, nivelProf, tituloProf);
+                    Profesor profe = new Profesor(prof.getNombre(),
+                            prof.getApellidoPaterno(),
+                            prof.getApellidoMaterno(),
+                            prof.getCurp(),
+                            prof.getDireccion(),
+                            prof.getCorreoElectronico(),
+                            prof.getMatricula(),
+                            prof.getSueldo(),
+                            prof.getDiaContrat(),
+                            prof.getMes(),
+                            prof.getYear(),
+                            facultityProfe,
+                            claseP,
+                            horarioProf,
+                            nivelProf,
+                            tituloProf);
 
                     trabajadorArregloDinamico.agrega(profe);
+                    serializer.write(trabajadorArregloDinamico, ruta);
                     break;
                 case 3:
                     Trabajador ayu = menuAltaGralTrabajador();
@@ -142,6 +165,7 @@ public class UImenu {
                             ayu.getMes(), ayu.getYear(), facultityAyu, creditos, titulado, claseA, horarioAyu);
 
                     trabajadorArregloDinamico.agrega(ayud);
+                    serializer.write(trabajadorArregloDinamico, ruta);
                     break;
                 case 4:
                     Trabajador admin = menuAltaGralTrabajador();
@@ -154,6 +178,7 @@ public class UImenu {
                             admin.getDiaContrat(),admin.getMes(),admin.getYear(),lugar,puesto,horarioAd);
 
                     trabajadorArregloDinamico.agrega(adm);
+                    serializer.write(trabajadorArregloDinamico, ruta);
                 case 0:
                     System.out.println("Volviendo al menú principal...\n");
                     continuar = false;
@@ -180,7 +205,7 @@ public class UImenu {
      */
     public static void buscaEmpleado(){
         int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
-        System.out.println(trabajadorArregloDinamico.busca(lookingFor(trabajadorArregloDinamico, matricula)));
+        System.out.println(trabajadorArregloDinamico.busca(lookingFor(trabajadorArregloDinamico, matricula)) != null ? trabajadorArregloDinamico.busca(lookingFor(trabajadorArregloDinamico, matricula)): matricula + " No se encontro en la base de datos");
     }
 
     /**

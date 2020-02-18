@@ -236,7 +236,7 @@ public class Trabajador implements Serializable {
     /**
      * Permite imprimir el cheque del empleado en un formato adecuado
      */
-    public void cheque(){
+    public String cheque(){
         String salarioImpuestos = "\n \n" +
                 "+--------------------------+\n" +
                 "|          Cheque          |\n" +
@@ -245,7 +245,7 @@ public class Trabajador implements Serializable {
                 " Salario base:  $ "+sueldo + "\n"+
                 " Deduccciones  -$ 540.36" + "\n"+
                 " Total:  $ "+  String.format("%.02f",sueldo-540.36) + "\n";
-        System.out.println(salarioImpuestos);
+        return salarioImpuestos;
     }
 
 }
