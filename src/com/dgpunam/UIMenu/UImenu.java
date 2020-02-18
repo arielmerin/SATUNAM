@@ -25,9 +25,7 @@ public class UImenu {
      */
     public static void uiMenu(){
         String label = "/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/\n" +
-                "\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\\n" +
-                "/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/\n" +
-                "\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\ \n\n";
+                "\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\ \n";
         System.out.println( label + " BIENVENIDO A DGP UNAM \n");
         System.out.println("Esto es al inicio al intentar leer el archivo");
         investigadors = (ArregloDinamico<Trabajador>) serializer.read(ruta);
@@ -60,6 +58,7 @@ public class UImenu {
                 case 4:
                     System.out.println(" :: IMPRMIR CHEQUE ::  ");
                     int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
+                    investigadors.busca(lookingFor(investigadors,matricula)).cheque();
                     break;
                 case 5:
                     System.out.println(":: ANTIGÜEDAD ::  ");
@@ -168,7 +167,9 @@ public class UImenu {
     public static void eraseMenu(){
         int buscado = getInt("Ingrese la maatricula del empleado que desea eliminar",
                 "Error, ingrese un valor numerico");
-        investigadors.elimina(lookingFor(investigadors, buscado));
+        Trabajador buscando = investigadors.elimina(lookingFor(investigadors, buscado));
+        System.out.println(buscando != null ? "Eliminamos correctamente a: " + buscando.getNombre() : "No se encontro en la base de datos");
+
     }
 
     /**
@@ -188,6 +189,7 @@ public class UImenu {
      */
     public static void antiguedadEmpleado(){
         int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
+        System.out.println("La antiguedad de " + investigadors.busca(lookingFor(investigadors, matricula)).getNombre() + "  es \n");
         System.out.println(investigadors.busca(lookingFor(investigadors, matricula)).getAntiguedad());
     }
 
