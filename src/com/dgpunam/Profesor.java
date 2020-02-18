@@ -45,11 +45,11 @@ public class Profesor extends Trabajador {
     @Override
     public String toString() {
         return super.toString() + "\n\n:::Profesor:::\n" +
-                "facultad: '" + facultad + '\n' +
-                ", clase: '" + clase + '\n' +
-                ", horario: " + horario +
-                ", nivelProf: '" + nivelProf + '\n' +
-                ", titulo: '" + titulo + '\n' +
+                 getNombre() +" estudio en: " + facultad + '\n' +
+                "Imparte la clase: " + clase + '\n' +
+                "En un horario de : " + horario +
+                "Nivel de profesor: " + nivelProf + '\n' +
+                "Titulo : " + titulo + '\n' +
                 '\n';
     }
 }
