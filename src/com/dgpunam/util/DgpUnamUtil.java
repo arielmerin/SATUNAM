@@ -134,7 +134,8 @@ public class DgpUnamUtil {
 
         String horarioAini = scan.nextLine();
         String[] horariosAini =  horarioAini.split(":");
-        int inicioH = Integer.parseInt(horariosAini[0]);
+        int inicioH = getInt(" ","Error ingrese un valor numrico");
+        Integer.parseInt(horariosAini[0]);
         int inicioM = Integer.parseInt(horariosAini[1]);
 
         System.out.println("Ingresa la hora en que termina la clase, con el siguiente formato HH:MM");

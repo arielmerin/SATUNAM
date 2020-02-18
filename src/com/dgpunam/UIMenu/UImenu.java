@@ -28,7 +28,7 @@ public class UImenu {
                 "\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\ \n";
         System.out.println( label + " BIENVENIDO A DGP UNAM \n");
         System.out.println(trabajadorArregloDinamico);
-        trabajadorArregloDinamico = (ArregloDinamico<Trabajador>) serializer.read(ruta);
+        //trabajadorArregloDinamico = (ArregloDinamico<Trabajador>) serializer.read(ruta);
         boolean continuar = true;
         do {
             System.out.println(" :: MENÚ PRINCIPAL ::   \n");
@@ -74,6 +74,7 @@ public class UImenu {
                     break;
                 case 7:
                     System.out.println(trabajadorArregloDinamico != null ? trabajadorArregloDinamico : "La lista se ementra vacia");
+                    break;
                 default:
                     System.out.println("Error, seleccione una opción válida\n");
             }
