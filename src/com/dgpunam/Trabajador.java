@@ -17,7 +17,7 @@ import java.io.Serializable;
  * @author Aquino Chapa Armando Abraham, Merino Peña Kevin Ariel
  * @version 1
  */
-public class Trabajador implements Serializable {
+public abstract class Trabajador implements Serializable {
     private String nombre;
     private String apellidoMaterno;
     private String apellidoPaterno;
