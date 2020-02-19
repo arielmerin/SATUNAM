@@ -92,48 +92,60 @@ public class UImenu {
      */
     public static void altaMenu(){
         boolean continuar = true;
+        Scanner scan = new Scanner(System.in);
+        String nombre = getStr("Ingrese el nombre del Trabajador: ");
+        System.out.println("Este es el nombre que le asignó: " + nombre);
 
+        String apellidoPaterno = getStr("Ingresse el apellido paterno: ");
+        System.out.println("Apellido paterno asignado " + apellidoPaterno);
 
+        String apellidoMaterno = getStr("Ingrese el apellido materno: ");
+        System.out.println("Apellido paterno asignado " + apellidoMaterno);
 
+        System.out.println("Ingresa el curp del Trabajador: ");
+        String curp = scan.nextLine();
+        System.out.println("El curp ingresado fue: " + curp);
 
+        System.out.println("Ingresa el domicilio del Trabajador: ");
+        String direccion = scan.nextLine();
+        System.out.println("La dirección ingresada fue: "+ direccion );
+
+        System.out.println("Ingresa el e-mail del investigador: ");
+        String correo = scan.nextLine();
+        System.out.println("El correo ingresado fue: "+ correo );
+
+        int matricula = getInt("Ingresa la matrícula del investigador: ","Error, ingrese un valor numérico");
+        System.out.println("La matricula ingresada fue: "+matricula);
+
+        double salario = getDouble("Ingrese el salario","Error, ingrese valores numéricos con decimales");
+        System.out.println("El salario registrado de " + nombre + " es: $"+salario);
+
+        int dia = getInt("Ingrese el día en que fue contratado: ", "Error, debe ingresar un valor numérico");
+        int mes = getInt("Ingrese el mes en que fue contratado: ", "Error, debe ingresar un valor numérico");
+        int agno = getInt("Ingrese el año en que fue contratado: ", "Error, debe ingresar un valor numérico");
+        System.out.println("La fecha de contratación fue: " + dia+"/"+mes+"/"+agno);
 
         do {
-            System.out.println("Ingrese una opción válida");
+            System.out.println("El tipo de trabajador");
             System.out.println("[1] Investigador");
             System.out.println("[2] Profesor");
             System.out.println("[3] Ayudante");
             System.out.println("[4] Administrativo");
-            System.out.println("[0] Regresar al menu princial");
-            Scanner scan = new Scanner(System.in);
+            continuar = false;
             int respuesta = getInt("Ingrese la opción deseada: ", "Error, ingrese un número");
             switch (respuesta){
                 case 1:
-                    Trabajador inv = menuAltaGralTrabajador();
                     String facultity = getStr("Ingrese la facultad a la que pertenece el investigador: ");
                     String nivelInve = getStr("Ingrese el nivel de investigador: ");
                     String nivelSni = getStr("Ingrese la categoría en el SNI");
 
-                    Investigador investigador = new Investigador(inv.getNombre(),
-                            inv.getApellidoPaterno(),
-                            inv.getApellidoMaterno(),
-                            inv.getCurp(),
-                            inv.getDireccion(),
-                            inv.getCorreoElectronico(),
-                            inv.getMatricula(),
-                            inv.getSueldo(),
-                            inv.getDiaContrat(),
-                            inv.getMes(),
-                            inv.getYear(),
-                            facultity,
-                            nivelInve,
-                            nivelSni);
+                    Investigador investigador = new Investigador(nombre, apellidoPaterno, apellidoMaterno, curp, direccion,
+                            correo, matricula, salario,dia, mes, agno, facultity, nivelInve, nivelSni);
                     System.out.println(investigador);
-
                     trabajadorArregloDinamico.agrega(investigador);
-                    serializer.write(trabajadorArregloDinamico, "Base_Datos.dat");
+                    serializer.write(trabajadorArregloDinamico, ruta);
                     break;
                 case 2:
-                    Trabajador prof = menuAltaGralTrabajador();
                     String facultityProfe = getStr("Ingrese la facultad a la que pertenece el profesor: ");
                     String claseP = getStr("Ingresa la clase que imparte: " );
                     Trabajador.Horario horarioProf = hacerHorario();
@@ -142,28 +154,12 @@ public class UImenu {
                     System.out.print("Ingresa el titulo del profesor: ");
                     String tituloProf = scan.nextLine();
 
-                    Profesor profe = new Profesor(prof.getNombre(),
-                            prof.getApellidoPaterno(),
-                            prof.getApellidoMaterno(),
-                            prof.getCurp(),
-                            prof.getDireccion(),
-                            prof.getCorreoElectronico(),
-                            prof.getMatricula(),
-                            prof.getSueldo(),
-                            prof.getDiaContrat(),
-                            prof.getMes(),
-                            prof.getYear(),
-                            facultityProfe,
-                            claseP,
-                            horarioProf,
-                            nivelProf,
-                            tituloProf);
-
+                    Profesor profe = new Profesor(nombre, apellidoPaterno,apellidoMaterno, curp, direccion, correo,
+                            matricula, salario, dia, mes, agno, facultityProfe, claseP, horarioProf, nivelProf, tituloProf);
                     trabajadorArregloDinamico.agrega(profe);
                     serializer.write(trabajadorArregloDinamico, ruta);
                     break;
                 case 3:
-                    Trabajador ayu = menuAltaGralTrabajador();
                     String facultityAyu = getStr("Ingrese la facultad a la que pertenece el profesor: ");
                     int creditos = getInt("Ingrese los creditos del ayudante: ", "Errorm ingrese valores numericos");
                     int titul = getInt("Ingrese 1 si el ayudante esta titulado, 0 si no lo esta  ", "Errorm ingrese valores numericos");
@@ -171,28 +167,25 @@ public class UImenu {
                     String claseA = getStr("Ingresa la clase que imparte: " );
                     Trabajador.Horario horarioAyu = hacerHorario();
 
-                    Ayudante ayud = new Ayudante(ayu.getNombre(), ayu.getApellidoPaterno(), ayu.getApellidoMaterno(), ayu.getCurp(),
-                            ayu.getDireccion(), ayu.getCorreoElectronico(), ayu.getMatricula(), ayu.getSueldo(), ayu.getDiaContrat(),
-                            ayu.getMes(), ayu.getYear(), facultityAyu, creditos, titulado, claseA, horarioAyu);
+                    Ayudante ayud = new Ayudante(nombre, apellidoPaterno, apellidoMaterno, curp, direccion, correo,
+                            matricula, salario, dia, mes, agno, facultityAyu, creditos, titulado, claseA, horarioAyu);
 
                     trabajadorArregloDinamico.agrega(ayud);
                     serializer.write(trabajadorArregloDinamico, ruta);
                     break;
                 case 4:
-                    Trabajador admin = menuAltaGralTrabajador();
                     String lugar = getStr("Ingresa el lugar de trabajo: ");
                     String puesto = getStr("Ingresa el lugar de trabajo: ");
                     Trabajador.Horario horarioAd = hacerHorario();
 
-                    Trabajador adm = new Adiministrativo(admin.getNombre(), admin.getApellidoPaterno(), admin.getApellidoMaterno(),
-                            admin.getCurp(),admin.getDireccion(),admin.getCorreoElectronico(),admin.getMatricula(),admin.getSueldo(),
-                            admin.getDiaContrat(),admin.getMes(),admin.getYear(),lugar,puesto,horarioAd);
-
+                    Trabajador adm = new Adiministrativo(nombre, apellidoPaterno, apellidoMaterno, curp, direccion,
+                            correo, matricula, salario, dia, mes, agno, lugar,puesto,horarioAd);
                     trabajadorArregloDinamico.agrega(adm);
                     serializer.write(trabajadorArregloDinamico, ruta);
-                case 0:
-                    System.out.println("Volviendo al menú principal...\n");
-                    continuar = false;
+                    break;
+                default:
+                    continuar = true;
+                    System.out.println("Selecciona un tipo de trabajador, es necesario\n");
             }
         }while (continuar);
     }
@@ -240,58 +233,7 @@ public class UImenu {
         int indice = lookingFor(trabajadorArregloDinamico, matricula);
         Trabajador modificaTrabajador = trabajadorArregloDinamico.busca(2);
         System.out.println("Este es el empleado a modificar: \n" + modificaTrabajador);
-        Trabajador gral = menuAltaGralTrabajador();
-        Scanner scan = new Scanner(System.in);
-        if(modificaTrabajador instanceof Profesor){
-            String facultityProfe = getStr("Ingrese la facultad a la que pertenece el profesor: ");
-            String claseP = getStr("Ingresa la clase que imparte: " );
-            Trabajador.Horario horarioProf = hacerHorario();
-            System.out.print("Ingresa el nivel del profeso  r: ");
-            String nivelProf = scan.nextLine();
-            System.out.print("Ingresa el titulo del profesor: ");
-            String tituloProf = scan.nextLine();
-
-            Profesor profe = new Profesor(gral.getNombre(),gral.getApellidoPaterno(), gral.getApellidoMaterno(),
-                    gral.getCurp(), gral.getDireccion(), gral.getCorreoElectronico(), gral.getMatricula(),
-                    gral.getSueldo(), gral.getDiaContrat(), gral.getMes(), gral.getYear(), facultityProfe,
-                    claseP, horarioProf, nivelProf, tituloProf);
-
-            trabajadorArregloDinamico.agrega(profe, indice);
-        }else if(modificaTrabajador instanceof Ayudante){
-            String facultityAyu = getStr("Ingrese la facultad a la que pertenece el profesor: ");
-            int creditos = getInt("Ingrese los creditos del ayudante: ", "Errorm ingrese valores numericos");
-            int titul = getInt("Ingrese 1 si el ayudante esta titulado, 0 si no lo esta  ", "Errorm ingrese valores numericos");
-            boolean titulado = (titul == 1)?true: false;
-            String claseA = getStr("Ingresa la clase que imparte: " );
-            Trabajador.Horario horarioAyu = hacerHorario();
-
-            Ayudante ayudante = new Ayudante(gral.getNombre(), gral.getApellidoPaterno(), gral.getApellidoMaterno(), gral.getCurp(),
-                    gral.getDireccion(), gral.getCorreoElectronico(), gral.getMatricula(), gral.getSueldo(), gral.getDiaContrat(),
-                    gral.getMes(), gral.getYear(), facultityAyu, creditos, titulado, claseA, horarioAyu);
-
-            trabajadorArregloDinamico.agrega(ayudante, indice);
-
-        }else if (modificaTrabajador instanceof Investigador){
-            String facultity = getStr("Ingrese la facultad a la que pertenece el investigador: ");
-            String nivelInve = getStr("Ingrese el nivel de investigador: ");
-            String nivelSni = getStr("Ingrese la categoría en el SNI");
-
-            Investigador investigador = new Investigador(gral.getNombre(),gral.getApellidoPaterno(),gral.getApellidoMaterno(),
-                    gral.getCurp(),gral.getDireccion(), gral.getCorreoElectronico(),gral.getMatricula(), gral.getSueldo(),
-                    gral.getDiaContrat(), gral.getMes(), gral.getYear(), facultity, nivelInve, nivelSni);
-
-            trabajadorArregloDinamico.agrega(investigador, indice);
-        }else{
-            String lugar = getStr("Ingresa el lugar de trabajo: ");
-            String puesto = getStr("Ingresa el lugar de trabajo: ");
-            Trabajador.Horario horarioAd = hacerHorario();
-
-            Trabajador adm = new Adiministrativo(gral.getNombre(), gral.getApellidoPaterno(), gral.getApellidoMaterno(),
-                    gral.getCurp(),gral.getDireccion(),gral.getCorreoElectronico(),gral.getMatricula(),gral.getSueldo(),
-                    gral.getDiaContrat(),gral.getMes(),gral.getYear(),lugar,puesto,horarioAd);
-
-            trabajadorArregloDinamico.agrega(adm, indice);
-        }
+        altaMenu();
 
         //System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)));
     }

@@ -82,46 +82,6 @@ public class DgpUnamUtil {
     }
 
     /**
-     * Sirve de apoyo en el ingreso de nuevo personal y en la modificacion de los trabajadores
-     * @return trbajador con los datos que solicito
-     */
-    public static Trabajador menuAltaGralTrabajador(){
-        Scanner scan = new Scanner(System.in);
-        String nombre = getStr("Ingrese el nombre del Trabajador: ");
-        System.out.println("Este es el nombre que le asignó: " + nombre);
-
-        String apellidoPaterno = getStr("Ingresse el apellido paterno: ");
-        System.out.println("Apellido paterno asignado " + apellidoPaterno);
-
-        String apellidoMaterno = getStr("Ingrese el apellido materno: ");
-        System.out.println("Apellido paterno asignado " + apellidoMaterno);
-
-        System.out.println("Ingresa el curp del Trabajador: ");
-        String curp = scan.nextLine();
-        System.out.println("El curp ingresado fue: " + curp);
-
-        System.out.println("Ingresa el domicilio del Trabajador: ");
-        String direccion = scan.nextLine();
-        System.out.println("La dirección ingresada fue: "+ direccion );
-
-        System.out.println("Ingresa el e-mail del investigador: ");
-        String correo = scan.nextLine();
-        System.out.println("El correo ingresado fue: "+ correo );
-
-        int matricula = getInt("Ingresa la matrícula del investigador: ","Error, ingrese un valor numérico");
-        System.out.println("La matricula ingresada fue: "+matricula);
-
-        double salario = getDouble("Ingrese el salario","Error, ingrese valores numéricos con decimales");
-        System.out.println("El salario registrado de " + nombre + " es: $"+salario);
-
-        int dia = getInt("Ingrese el día en que fue contratado: ", "Error, debe ingresar un valor numérico");
-        int mes = getInt("Ingrese el mes en que fue contratado: ", "Error, debe ingresar un valor numérico");
-        int agno = getInt("Ingrese el año en que fue contratado: ", "Error, debe ingresar un valor numérico");
-        System.out.println("La fecha de contratación fue: " + dia+"/"+mes+"/"+agno);
-        return null;
-    }
-
-    /**
      * Imprime en la pantalla instrucciones al usuario para que este se encargue de proporcionar los datos que permitiran
      * crear un horario de algun empleado, ademas otorga formato a la entrada
      * @return horario hecho
