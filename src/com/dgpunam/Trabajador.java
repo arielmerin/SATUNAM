@@ -161,7 +161,7 @@ public class Trabajador implements Serializable {
 
 
         Period antiguedad = Period.between(origen, ld);
-        return "Antiguedad:" + antiguedad.getYears() +" años, " +antiguedad.getMonths() +" meses y "+ antiguedad.getDays() +" días";
+        return " " + antiguedad.getYears() +" años, " +antiguedad.getMonths() +" meses y "+ antiguedad.getDays() +" días\n";
     }
 
     /**
@@ -199,12 +199,10 @@ public class Trabajador implements Serializable {
 
         @Override
         public String toString() {
-            return "Horario{" +
-                    "inicioHoras=" + inicioHoras +
-                    ", terminoHoras=" + terminoHoras +
-                    ", inicioMin=" + inicioMin +
-                    ", terminoMin=" + terminoMin +
-                    '}';
+            return  "Inicio " + inicioHoras +
+                    ":" + terminoHoras +
+                    " Termina " + inicioMin +
+                    ":" + terminoMin + "\n";
         }
     }
 
@@ -216,7 +214,7 @@ public class Trabajador implements Serializable {
                 "+--------------------------------------+\n" +
                 "  Nombre: " +apellidoPaterno + " " + apellidoMaterno + " " + nombre+ "\n"+
                 "  Número de trabajador: " + matricula + "\n"+
-                "  " + getAntiguedad() + "\n"+
+                "  Antiguedad: " + getAntiguedad() + "\n"+
                 "  CURP: " + curp + "\n"+
                 "  Dirección: " + direccion + "\n"+
                 "  Correo electrónico: " + correoElectronico + "\n";
@@ -243,6 +241,7 @@ public class Trabajador implements Serializable {
                 "+--------------------------+\n" +
                 "|          Cheque          |\n" +
                 "+--------------------------+\n" +
+                " Nombre de la (el) empleada(o): " + nombre + " " + apellidoPaterno + " "+ apellidoMaterno+ "\n" +
                 " Salario base:  $ "+sueldo + "\n"+
                 " Deduccciones  -$ 540.36" + "\n"+
                 " Total:  $ "+  String.format("%.02f",sueldo-540.36) + "\n";
