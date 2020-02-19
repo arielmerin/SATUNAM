@@ -3,6 +3,12 @@ package com.dgpunam.UIMenu;
 import com.dgpunam.*;
 import com.dgpunam.util.ArregloDinamico;
 import com.dgpunam.serializer.*;
+
+import javax.swing.*;
+import javax.xml.ws.Action;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Scanner;
 import static com.dgpunam.util.DgpUnamUtil.*;
 
@@ -14,7 +20,45 @@ import static com.dgpunam.util.DgpUnamUtil.*;
  * @author Aquino Chapa Armando Abraham and Merino Peña Kevin Ariel
  * @version 1.0
  */
-public class UImenu {
+public class UImenu extends JFrame implements ActionListener {
+    private JLabel etiqueta;
+    private JLabel bienvenida;
+    private JButton cerrar, alta,baja,buscar,modificar, cheque;
+
+    public UImenu(){
+        setLayout(null);
+        etiqueta = new JLabel("Hola jaja\n a ver si sale esto o acaba mal\n guess what?????");
+        bienvenida = new JLabel("BIENVENIDO A DGP UNAM ");
+
+        alta = new JButton("Alta de un empleado");
+        baja = new JButton("Eliminar un empleado");
+        buscar = new JButton("Buscar un empleado");
+        modificar = new JButton("Modifiar un empleado");
+        cheque = new JButton( "Imprimir cheque");
+        cerrar = new JButton("Cerrar");
+
+        bienvenida.setBounds(10,10,250,250);
+        etiqueta.setBounds(10,20,200,300);
+        alta.setBounds(100,250,200,25);
+        baja.setBounds(100,280,200,25);
+        modificar.setBounds(100,310,200,25);
+        cheque.setBounds(100,340,200,50);
+        cerrar.setBounds(170,550,100,20);
+        //cerrar.setLocation(new Point(0,0));
+
+        add(bienvenida);
+        add(etiqueta);
+        add(alta);
+        add(baja);
+        add(modificar);
+        add(cheque);
+
+        add(cerrar);
+
+        cerrar.addActionListener(this);
+        alta.addActionListener(this);
+    }
+
     static Serializer serializer = new Serializer();
     static String ruta = "Base_Datos.dat";
     static ArregloDinamico<Trabajador> trabajadorArregloDinamico = new ArregloDinamico<>(50);
@@ -24,6 +68,16 @@ public class UImenu {
      * ingresa a los demas metodos de la misma clase.
      */
     public static void uiMenu(){
+        UImenu menu = new UImenu();
+        menu.setBounds(0,0,400,300);
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
+        /**
+         * NO se puede modificar el tamaño de la ventana
+         */
+        menu.setResizable(false);
+
+
         System.out.println(serializer.read(ruta));
         if(serializer.read(ruta) != null){
             trabajadorArregloDinamico = (ArregloDinamico<Trabajador>) serializer.read(ruta);
@@ -291,4 +345,12 @@ public class UImenu {
         //System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)));
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == cerrar){
+            System.exit(0);
+        }else if (e.getSource() == alta){
+
+        }
+    }
 }
