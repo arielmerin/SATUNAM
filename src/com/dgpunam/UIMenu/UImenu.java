@@ -40,9 +40,8 @@ public class UImenu {
             System.out.println(" [2] Dar de baja un empleado");
             System.out.println(" [3] Ver los datos de un empleado, (proporcionando su matricula)");
             System.out.println(" [4] Imrpmir cheque de un empleado (proporcionando su matricula)");
-            System.out.println(" [5] Ver antigüedad de un empleado (proporcionando su matricula)");
-            System.out.println(" [6] Modificar algún empleado (proporcionando su matricula)");
-            System.out.println(" [7] Mostrar la lista de todos los empleados");
+            System.out.println(" [5] Modificar algún empleado (proporcionando su matricula)");
+            System.out.println(" [6] Mostrar la lista de todos los empleados");
             System.out.println(" [0] Salir \n");
             int answer = getInt(" Seleccione la opción deseada: ", "Error, ingrese un valor válido");
             switch (answer) {
@@ -64,10 +63,6 @@ public class UImenu {
                     System.out.println(trabajadorArregloDinamico.busca(lookingFor(trabajadorArregloDinamico,matricula)) == null ? "Hello nada por aqui" : trabajadorArregloDinamico.busca(lookingFor(trabajadorArregloDinamico,matricula)).cheque());;
                     break;
                 case 5:
-                    System.out.println(":: ANTIGÜEDAD ::  ");
-                    antiguedadEmpleado();
-                    break;
-                case 6:
                     System.out.println(":: MODIFICAR EMPLEADO ::  ");
                     modificarEmpleado();
                     break;
@@ -76,7 +71,7 @@ public class UImenu {
                     System.out.println("¡¡¡Hasta pronto!!!\n\n" + label);
                     continuar = false;
                     break;
-                case 7:
+                case 6:
                     System.out.println(trabajadorArregloDinamico != null ? trabajadorArregloDinamico : "La lista se encuentra vacia");
                     break;
                 default:

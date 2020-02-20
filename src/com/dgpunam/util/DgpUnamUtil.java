@@ -158,7 +158,7 @@ public class DgpUnamUtil {
         for(Trabajador trab: arreglo){
             contador++;
             if (trab.getMatricula() == busqueda){
-                return contador;
+                return contador - 1;
             }
         }
         return -1;

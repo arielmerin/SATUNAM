@@ -100,7 +100,7 @@ public class ArregloDinamico<T> implements Iterable<T>, Serializable {
      * @return regresa el arreglo en esa posicion si lo encontro
      */
     public T busca(int n) {
-        if (n < elementos && arreglo[n] != null){
+        if (n < elementos && n >= 0){
             return arreglo[n];
         }else {
             return null;

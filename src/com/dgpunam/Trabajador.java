@@ -160,7 +160,7 @@ public class Trabajador implements Serializable {
         LocalDate origen = LocalDate.parse(getFechaContrato(), ftm);
 
 
-        Period antiguedad = Period.between(origen, ld);
+        Period antiguedad = Period.between(ld, origen);
         return " " + antiguedad.getYears() +" años, " +antiguedad.getMonths() +" meses y "+ antiguedad.getDays() +" días\n";
     }
 
