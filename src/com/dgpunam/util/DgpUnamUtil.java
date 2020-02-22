@@ -1,13 +1,14 @@
 package com.dgpunam.util;
 
 import com.dgpunam.Trabajador;
+
 import java.util.Scanner;
 
 /**
  * <h1>Utilidadaes</h1>
  * Clase que sirve de auxiliar a menu para permitir la entrada de datos desde la terminal y realizar las validaciones
  * necesarias para el requerimiento de tipo de dato
- * @author Aquino Chapa Armando Abraham and Ariel Merino Peña
+ * @author Aquino Chapa Armando Abraham and Merino Peña Kevin Ariel
  * @version 1
  */
 public class DgpUnamUtil {
@@ -24,8 +25,6 @@ public class DgpUnamUtil {
         Scanner scan = new Scanner(System.in);
         String librearBuffer;
         boolean conti = true;
-
-
         do{
             System.out.println(msg);
             if(scan.hasNextInt())
@@ -40,6 +39,26 @@ public class DgpUnamUtil {
         return entero;
     }
 
+    public static int getInt(String msg, String error, int minimo, int maximo){
+        int entero = 0;
+        Scanner scan = new Scanner(System.in);
+        String librearBuffer;
+        boolean conti = true;
+        do{
+            System.out.println(msg);
+            if(scan.hasNextInt())
+            {
+                entero = scan.nextInt();
+                if (entero >= minimo && entero <= maximo){
+                    conti = false;
+                }
+            }else{
+                librearBuffer = scan.next();
+                System.out.println(error);
+            }
+        }while(conti);
+        return entero;
+    }
     /**
      * Este metodo imprime el pantalla un mensaje solicitando al usuario que ingrese una cadena, capta ese valor y lo
      * devuelve
@@ -114,9 +133,9 @@ public class DgpUnamUtil {
         double salario = getDouble("Ingrese el salario","Error, ingrese valores numéricos con decimales");
         System.out.println("El salario registrado de " + nombre + " es: $"+salario);
 
-        int dia = getInt("Ingrese el día en que fue contratado: ", "Error, debe ingresar un valor numérico");
-        int mes = getInt("Ingrese el mes en que fue contratado: ", "Error, debe ingresar un valor numérico");
-        int agnno = getInt("Ingrese el año en que fue contratado: ", "Error, debe ingresar un valor numérico");
+        int dia = getInt("Ingrese el día en que fue contratado: ", "Error, debe ingresar un valor numérico", 1, 31);
+        int mes = getInt("Ingrese el mes en que fue contratado: ", "Error, debe ingresar un valor numérico",1,12);
+        int agnno = getInt("Ingrese el año en que fue contratado: ", "Error, debe ingresar un valor numérico", 1920,2020);
         System.out.println("La fecha de contratación fue: " + dia+"/"+mes+"/"+agnno);
         return new Trabajador(nombre, apellidoPaterno, apellidoMaterno, curp, direccion, correo, matricula, salario, dia,
                 mes, agnno);
@@ -128,14 +147,11 @@ public class DgpUnamUtil {
      * @return horario hecho
      */
     public static Trabajador.Horario hacerHorario(){
-
         System.out.println("Ingresa el horario de inicio: con el siguiente formato HH:MM");
-        Scanner scan = new Scanner(System.in);
-
-        int inicioH = getInt("Ingrese la hora en formato en que inicia la clase","Error ingrese un valor numrico");
-        int inicioM = getInt("Ingrese los minutos en que inicia la clase", "Error, ingrese un valor numerico");
-        int finH = getInt("Ingrese la hora en formato en que finaliza la clase","Error ingrese un valor numrico");
-        int finM = getInt("Ingrese los minutos en que finaliza la clase", "Error, ingrese un valor numerico");
+        int inicioH = getInt("Ingrese la hora en formato en que inicia la clase","Error ingrese un valor numrico", 1,22);
+        int inicioM = getInt("Ingrese los minutos en que inicia la clase", "Error, ingrese un valor numerico",0,59);
+        int finH = getInt("Ingrese la hora en formato en que finaliza la clase","Error ingrese un valor numrico",1,23);
+        int finM = getInt("Ingrese los minutos en que finaliza la clase", "Error, ingrese un valor numerico",0,59);
         return new Trabajador.Horario(inicioH,inicioM,finH,finM);
     }
 

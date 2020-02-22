@@ -1,14 +1,15 @@
-package com.dgpunam.util; /**
- *
- * @author Ariel Merino Peña
- */
-import java.io.IOException;
-import java.io.ObjectInputStream;
+package com.dgpunam.util;
+
 import java.io.Serializable;
-import com.dgpunam.Trabajador;
-import com.dgpunam.*;
 import java.util.Iterator;
 
+/**
+ * Permite el manejo y la creacion de Arreglos cuyo limite no tenga que estar precisamente limitando la incersion de datos
+ * Ademas de contar con metodos que realizan operaciones dentro de la estructura
+ * @param <T> Tipo de dato que se almacenara, para asegurar la homogeneidad
+ * @author Merino Peña Kevin Ariel and Aquino Chapa Armando Abraham
+ * @version 2.1
+ */
 public class ArregloDinamico<T> implements Iterable<T>, Serializable {
 
     private T[] arreglo;
@@ -16,7 +17,7 @@ public class ArregloDinamico<T> implements Iterable<T>, Serializable {
 
     /**
      * No importa el nombre que se le ponga a la clase, solo es para fines didácticos
-     * @param <T>
+     * @param <T> Mismo tipo de la clase, sobre los cuales se va a iterar
      */
     private class Iterador<T> implements Iterator<T> {
 
@@ -144,20 +145,13 @@ public class ArregloDinamico<T> implements Iterable<T>, Serializable {
         return false;
     }
 
-
     @Override
     public Iterator<T> iterator() {
         return new Iterador();
     }
 
-    /**
-     * Método para representar el arreglo en una cadena.
-     *
-     * @return regresa la cadena en forma de arreglo
-     */
     @Override
     public String toString() {
-
         StringBuilder std = new StringBuilder();
         Iterador it = new Iterador();
         while (it.hasNext()){

@@ -1,4 +1,5 @@
 import static com.dgpunam.UIMenu.UImenu.uiMenu;
+import static com.dgpunam.util.DgpUnamUtil.getInt;
 
 /**
  * Clase prinicipal donde se llama al menu y este se encarga de dar el comportamiento requerido
