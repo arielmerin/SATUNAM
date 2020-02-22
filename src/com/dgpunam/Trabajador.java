@@ -26,7 +26,7 @@ public class Trabajador implements Serializable {
     private String correoElectronico;
     private int matricula;
     private double sueldo;
-    private String fechaContrato;
+    private String fechaContrat;
     private int diaContrat;
     private int mes;
     private int year;
@@ -52,7 +52,7 @@ public class Trabajador implements Serializable {
      * @return valor del año
      */
     public int getYear() {
-        return year;
+        return year > 1900 ? year : 2012;
     }
 
     /**
@@ -67,11 +67,11 @@ public class Trabajador implements Serializable {
      * @param sueldo Monto que se le paga al trabjadaor por brindar sus servicios
      * @param diaContrat Dia 1-31 en el que fue contratado el trabajador
      * @param mes mes 1-12 en el que fue contratado
-     * @param year 1900-2020 en el que fue contratado el trabajador
+     * @param ano 1900-2020 en el que fue contratado el trabajador
      */
     public Trabajador(String nombre, String apellidoPaterno, String apellidoMaterno, String curp,
                       String direccion, String correoElectronico, int matricula, double sueldo, int diaContrat,
-                      int mes, int year) {
+                      int mes, int ano) {
         this.nombre = nombre;
         this.apellidoMaterno = apellidoMaterno;
         this.apellidoPaterno = apellidoPaterno;
@@ -80,10 +80,13 @@ public class Trabajador implements Serializable {
         this.correoElectronico = correoElectronico;
         this.matricula = matricula;
         this.sueldo = sueldo;
-        GregorianCalendar calendar = new GregorianCalendar(year, mes-1, diaContrat);
-        SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-        fechaContrato = df.format(calendar.getTime());
+        this.year = ano;
+        this.mes = mes;
+        this.diaContrat = diaContrat;
 
+        GregorianCalendar calendar = new GregorianCalendar(ano, mes-1, diaContrat);
+        SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        this.fechaContrat = df.format(calendar.getTime());
     }
 
     /**
@@ -157,10 +160,9 @@ public class Trabajador implements Serializable {
     public String getAntiguedad(){
         LocalDate ld =  LocalDate.now();
         DateTimeFormatter ftm = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        ftm.format(ld);
         LocalDate origen = LocalDate.parse(getFechaContrato(), ftm);
-
-
-        Period antiguedad = Period.between(ld, origen);
+        Period antiguedad = Period.between(origen, ld);
         return " " + antiguedad.getYears() +" años, " +antiguedad.getMonths() +" meses y "+ antiguedad.getDays() +" días\n";
     }
 
@@ -169,7 +171,7 @@ public class Trabajador implements Serializable {
      * @return fecha en que se contrato
      */
     public String getFechaContrato() {
-        return fechaContrato;
+        return fechaContrat;
     }
 
     /**
@@ -218,7 +220,6 @@ public class Trabajador implements Serializable {
                 "  CURP: " + curp + "\n"+
                 "  Dirección: " + direccion + "\n"+
                 "  Correo electrónico: " + correoElectronico + "\n";
-
         String logo =  "\n" +
                 " __    __  __    __   ______   __       __ \n" +
                 "|  \\  |  \\|  \\  |  \\ /      \\ |  \\     /  \\\n" +

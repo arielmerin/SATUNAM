@@ -24,12 +24,9 @@ public class UImenu {
      * ingresa a los demas metodos de la misma clase.
      */
     public static void uiMenu(){
-        System.out.println(serializer.read(ruta));
         if(serializer.read(ruta) != null){
             trabajadorArregloDinamico = (ArregloDinamico<Trabajador>) serializer.read(ruta);
-            System.out.println("La ruta no tenia null");
         }
-        System.out.println( trabajadorArregloDinamico == null ? "Esta en null": "NO es null");
         String label = "/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/ \\/\n" +
                 "\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\_/\\ \n";
         System.out.println( label + " BIENVENIDO A DGP UNAM \n");
@@ -282,8 +279,5 @@ public class UImenu {
 
             trabajadorArregloDinamico.agrega(adm, indice);
         }
-
-        //System.out.println(trabajadores.busca(lookingFor(trabajadores, matricula)));
     }
-
 }

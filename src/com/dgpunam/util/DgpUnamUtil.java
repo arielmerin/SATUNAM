@@ -116,10 +116,10 @@ public class DgpUnamUtil {
 
         int dia = getInt("Ingrese el día en que fue contratado: ", "Error, debe ingresar un valor numérico");
         int mes = getInt("Ingrese el mes en que fue contratado: ", "Error, debe ingresar un valor numérico");
-        int agno = getInt("Ingrese el año en que fue contratado: ", "Error, debe ingresar un valor numérico");
-        System.out.println("La fecha de contratación fue: " + dia+"/"+mes+"/"+agno);
+        int agnno = getInt("Ingrese el año en que fue contratado: ", "Error, debe ingresar un valor numérico");
+        System.out.println("La fecha de contratación fue: " + dia+"/"+mes+"/"+agnno);
         return new Trabajador(nombre, apellidoPaterno, apellidoMaterno, curp, direccion, correo, matricula, salario, dia,
-                mes, agno);
+                mes, agnno);
     }
 
     /**

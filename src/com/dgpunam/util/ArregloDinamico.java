@@ -161,14 +161,8 @@ public class ArregloDinamico<T> implements Iterable<T>, Serializable {
         StringBuilder std = new StringBuilder();
         Iterador it = new Iterador();
         while (it.hasNext()){
-
-            std.append(it.next() + ", ");
-
+            std.append(it.next());
         }
-        String result = "";
-        if (std.length() > 1){
-            result = std.substring(0,std.length() - 2);
-        }
-        return "[" + result + "]";
+        return std.toString();
     }
 }
