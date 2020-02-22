@@ -37,7 +37,7 @@ public class Adiministrativo extends Trabajador {
 
     @Override
     public String toString() {
-        return super.toString() + "Adiministrativo\n" +
+        return super.toString() + "::: Adiministrativo :::\n" +
                 "Labora en: " + lugarTrabajo + '\n' +
                 "Puesto: " + puesto + '\n' +
                 "Horario: " + horario  + "\n";

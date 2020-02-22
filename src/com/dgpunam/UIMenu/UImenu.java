@@ -96,26 +96,14 @@ public class UImenu {
             switch (respuesta){
                 case 1:
                     Trabajador inv = menuAltaGralTrabajador();
-                    String facultity = getStr("Ingrese la facultad a la que pertenece el investigador: ");
-                    String nivelInve = getStr("Ingrese el nivel de investigador: ");
+                    String facultity = getStr("Ingrese la facultad a la que pertenece el(la) investigadora: ");
+                    String nivelInve = getStr("Ingrese el nivel del(la) investigador(a): ");
                     String nivelSni = getStr("Ingrese la categoría en el SNI");
 
-                    Investigador investigador = new Investigador(inv.getNombre(),
-                            inv.getApellidoPaterno(),
-                            inv.getApellidoMaterno(),
-                            inv.getCurp(),
-                            inv.getDireccion(),
-                            inv.getCorreoElectronico(),
-                            inv.getMatricula(),
-                            inv.getSueldo(),
-                            inv.getDiaContrat(),
-                            inv.getMes(),
-                            inv.getYear(),
-                            facultity,
-                            nivelInve,
-                            nivelSni);
-                    System.out.println(investigador);
-
+                    Investigador investigador = new Investigador(inv.getNombre(), inv.getApellidoPaterno(), inv.getApellidoMaterno(),
+                            inv.getCurp(), inv.getDireccion(), inv.getCorreoElectronico(),inv.getMatricula(),
+                            inv.getSueldo(), inv.getDiaContrat(), inv.getMes(), inv.getYear(), facultity,
+                            nivelInve, nivelSni);
                     trabajadorArregloDinamico.agrega(investigador);
                     serializer.write(trabajadorArregloDinamico, "Base_Datos.dat");
                     break;
@@ -129,22 +117,10 @@ public class UImenu {
                     System.out.print("Ingresa el titulo del profesor: ");
                     String tituloProf = scan.nextLine();
 
-                    Profesor profe = new Profesor(prof.getNombre(),
-                            prof.getApellidoPaterno(),
-                            prof.getApellidoMaterno(),
-                            prof.getCurp(),
-                            prof.getDireccion(),
-                            prof.getCorreoElectronico(),
-                            prof.getMatricula(),
-                            prof.getSueldo(),
-                            prof.getDiaContrat(),
-                            prof.getMes(),
-                            prof.getYear(),
-                            facultityProfe,
-                            claseP,
-                            horarioProf,
-                            nivelProf,
-                            tituloProf);
+                    Profesor profe = new Profesor(prof.getNombre(), prof.getApellidoPaterno(),prof.getApellidoMaterno(),
+                            prof.getCurp(), prof.getDireccion(), prof.getCorreoElectronico(), prof.getMatricula(),
+                            prof.getSueldo(), prof.getDiaContrat(), prof.getMes(), prof.getYear(), facultityProfe,
+                            claseP, horarioProf, nivelProf, tituloProf);
 
                     trabajadorArregloDinamico.agrega(profe);
                     serializer.write(trabajadorArregloDinamico, ruta);

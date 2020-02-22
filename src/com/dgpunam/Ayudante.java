@@ -46,10 +46,10 @@ public class Ayudante extends Trabajador {
     @Override
     public String toString() {
         return super.toString() + "\n\n:::Ayudante:::\n" +
-                "Facultad: '" + facultad + '\n' +
+                "Facultad: " + facultad + '\n' +
                 "N. Creditos: " + creditos +
-                "Cuenta con titlo" + (estaTitulado ?  "Si":  "no") +
-                "Imparte: " + clase + '\n' +
+                "Cuenta con titlo " + (estaTitulado ?  "Si":  "no") +
+                "\nImparte: " + clase + '\n' +
                 "En un horario: " + horario +
                 '\n';
     }

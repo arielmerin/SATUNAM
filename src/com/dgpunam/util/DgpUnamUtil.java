@@ -106,36 +106,36 @@ public class DgpUnamUtil {
      */
     public static Trabajador menuAltaGralTrabajador(){
         Scanner scan = new Scanner(System.in);
-        String nombre = getStr("Ingrese el nombre del Trabajador: ");
+        String nombre = getStr("Ingrese el nombre del(la) Trabajador(a): ");
         System.out.println("Este es el nombre que le asignó: " + nombre);
 
-        String apellidoPaterno = getStr("Ingresse el apellido paterno: ");
+        String apellidoPaterno = getStr("Ingresse su apellido paterno: ");
         System.out.println("Apellido paterno asignado " + apellidoPaterno);
 
-        String apellidoMaterno = getStr("Ingrese el apellido materno: ");
+        String apellidoMaterno = getStr("Ingrese su apellido materno: ");
         System.out.println("Apellido paterno asignado " + apellidoMaterno);
 
-        System.out.println("Ingresa el curp del Trabajador: ");
+        System.out.println("Ingresa su curp: ");
         String curp = scan.nextLine();
         System.out.println("El curp ingresado fue: " + curp);
 
-        System.out.println("Ingresa el domicilio del Trabajador: ");
+        System.out.println("Ingresa el domicilio del(la) Trabajador(a): ");
         String direccion = scan.nextLine();
         System.out.println("La dirección ingresada fue: "+ direccion );
 
-        System.out.println("Ingresa el e-mail del investigador: ");
+        System.out.println("Ingresa el e-mail del(la) investigador(a): ");
         String correo = scan.nextLine();
         System.out.println("El correo ingresado fue: "+ correo );
 
-        int matricula = getInt("Ingresa la matrícula del investigador: ","Error, ingrese un valor numérico");
+        int matricula = getInt("Ingresa su matrícula: ","Error, ingrese un valor numérico");
         System.out.println("La matricula ingresada fue: "+matricula);
 
         double salario = getDouble("Ingrese el salario","Error, ingrese valores numéricos con decimales");
         System.out.println("El salario registrado de " + nombre + " es: $"+salario);
 
-        int dia = getInt("Ingrese el día en que fue contratado: ", "Error, debe ingresar un valor numérico", 1, 31);
-        int mes = getInt("Ingrese el mes en que fue contratado: ", "Error, debe ingresar un valor numérico",1,12);
-        int agnno = getInt("Ingrese el año en que fue contratado: ", "Error, debe ingresar un valor numérico", 1920,2020);
+        int dia = getInt("Ingrese el día en que fue contratada(o): ", "Error, debe ingresar un valor numérico", 1, 31);
+        int mes = getInt("Ingrese el mes en que fue contratada(o): ", "Error, debe ingresar un valor numérico",1,12);
+        int agnno = getInt("Ingrese el año en que fue contratada(a): ", "Error, debe ingresar un valor numérico", 1920,2020);
         System.out.println("La fecha de contratación fue: " + dia+"/"+mes+"/"+agnno);
         return new Trabajador(nombre, apellidoPaterno, apellidoMaterno, curp, direccion, correo, matricula, salario, dia,
                 mes, agnno);

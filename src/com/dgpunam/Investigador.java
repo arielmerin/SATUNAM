@@ -38,9 +38,9 @@ public class Investigador extends Trabajador {
 
     @Override
     public String toString() {
-        return super.toString() +"\n\n:::Investigador:::\n" +
+        return super.toString() +"\n\n:::Investigador(a):::\n" +
                 "facultad de: '" + facultad + '\n' +
-                "El nivel de investigador de " + getNombre() + " es:  " + facultad + '\n' +
+                "El nivel de investigador(a) de " + getNombre() + " es:  " + facultad + '\n' +
                 "El nivel en el SNI es: " + nivelSNI + '\n' +
                 '\n';
     }
