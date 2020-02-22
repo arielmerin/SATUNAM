@@ -34,9 +34,9 @@ public class UImenu {
         do {
             System.out.println(" :: MENÚ PRINCIPAL ::   \n");
             System.out.println(" [1] Dar de alta un empleado");
-            System.out.println(" [2] Dar de baja un empleado");
-            System.out.println(" [3] Ver los datos de un empleado, (proporcionando su matricula)");
-            System.out.println(" [4] Imrpmir cheque de un empleado (proporcionando su matricula)");
+            System.out.println(" [2] Dar de baja un empleado (proporcionando su matricula)");
+            System.out.println(" [3] Ver los datos de un empleado (proporcionando su matricula)");
+            System.out.println(" [4] Imprimir cheque de un empleado (proporcionando su matricula)");
             System.out.println(" [5] Modificar algún empleado (proporcionando su matricula)");
             System.out.println(" [6] Mostrar la lista de todos los empleados");
             System.out.println(" [0] Salir \n");
@@ -85,7 +85,7 @@ public class UImenu {
     public static void altaMenu(){
         boolean continuar = true;
         do {
-            System.out.println("Ingrese una opción válida");
+            System.out.println("Seleccione una opcion");
             System.out.println("[1] Investigador");
             System.out.println("[2] Profesor");
             System.out.println("[3] Ayudante");
@@ -105,7 +105,7 @@ public class UImenu {
                             inv.getSueldo(), inv.getDiaContrat(), inv.getMes(), inv.getYear(), facultity,
                             nivelInve, nivelSni);
                     trabajadorArregloDinamico.agrega(investigador);
-                    serializer.write(trabajadorArregloDinamico, "Base_Datos.dat");
+                    serializer.write(trabajadorArregloDinamico, ruta);
                     break;
                 case 2:
                     Trabajador prof = menuAltaGralTrabajador();
@@ -180,17 +180,6 @@ public class UImenu {
     public static void buscaEmpleado(){
         int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
         System.out.println(trabajadorArregloDinamico.busca(lookingFor(trabajadorArregloDinamico, matricula)) != null ? trabajadorArregloDinamico.busca(lookingFor(trabajadorArregloDinamico, matricula)): matricula + " No se encontro en la base de datos");
-    }
-
-    /**
-     * <h2>Antiguedad</h2>
-     * En esta opcion se permite visualizar la antiguedad de algun empleado y dado su numero de matricula y ademas se encarga
-     * de imprimir dicho valor
-     */
-    public static void antiguedadEmpleado(){
-        int matricula = getInt("Ingrese el numero de matricula: ", "Error, ingrese un valor numerico");
-        System.out.println("La antiguedad de " + trabajadorArregloDinamico.busca(lookingFor(trabajadorArregloDinamico, matricula)).getNombre() + "  es \n");
-        System.out.println(trabajadorArregloDinamico.busca(lookingFor(trabajadorArregloDinamico, matricula)).getAntiguedad());
     }
 
     /**
