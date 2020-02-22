@@ -2,6 +2,8 @@ package com.dgpunam;
 
 /**
  * Esta clase permite manejar de forma correcta el comportamiento y los atributos particulares de unx trabajadorx
+ * @author Aquino Chapa Armando Abraham and Merino Peña Kevin Ariel
+ * @version 1
  */
 public class Investigador extends Trabajador {
 

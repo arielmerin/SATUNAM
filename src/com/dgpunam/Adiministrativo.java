@@ -2,6 +2,8 @@ package com.dgpunam;
 
 /**
  * Permite el manejo adecuado de los tipos Administrador dentro de los trabjadores
+ * @author Aquino Chapa Armando Abraham and Merino Peña Kevin Ariel
+ * @version 1
  */
 public class Adiministrativo extends Trabajador {
 

@@ -1,6 +1,5 @@
 package com.dgpunam.serializer;
-import java.util.*;
-import java.io.*;
+
 import java.io.IOException;
 import java.io.NotSerializableException;
 import java.io.ObjectOutputStream;
@@ -9,10 +8,9 @@ import java.io.EOFException;
 import java.io.ObjectInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import com.dgpunam.*;
-import com.dgpunam.Trabajador;
-import com.dgpunam.util.ArregloDinamico;
+
 /**
+ * Permite hacer la inscripcion de objetos en un documento de salida para mantener la persistencia de datos
  * @author Armando Aquino and Kevin Ariel Merino Peña
  * @version 1
  */

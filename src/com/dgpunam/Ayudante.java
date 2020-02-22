@@ -4,6 +4,8 @@ package com.dgpunam;
  *
  * Hereda de {@link Trabajador}
  * Forma parte de las clases donde se especializa el uso de la Abstracta trabajador
+ * @author Aquino Chapa Armando Abraham and Merino Peña Kevin Ariel
+ * @version 1
  */
 public class Ayudante extends Trabajador {
 

@@ -2,6 +2,8 @@ package com.dgpunam;
 
 /**
  * Faculta al programa para manejar de manera adecuada los profesores en la base de datos
+ * @author Aquino Chapa Armando Abraham and Merino Peña Kevin Ariel
+ * @version 1
  */
 public class Profesor extends Trabajador {
 
