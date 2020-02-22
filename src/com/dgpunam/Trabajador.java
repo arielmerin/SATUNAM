@@ -201,7 +201,7 @@ public class Trabajador implements Serializable {
         public String toString() {
             return  "Inicio " + inicioHoras +
                     ":" + terminoHoras +
-                    " Termina " + inicioMin +
+                    " \nTermina " + inicioMin +
                     ":" + terminoMin + "\n";
         }
     }

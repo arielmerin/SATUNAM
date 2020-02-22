@@ -132,17 +132,10 @@ public class DgpUnamUtil {
         System.out.println("Ingresa el horario de inicio: con el siguiente formato HH:MM");
         Scanner scan = new Scanner(System.in);
 
-        String horarioAini = scan.nextLine();
-        String[] horariosAini =  horarioAini.split(":");
-        int inicioH = getInt(" ","Error ingrese un valor numrico");
-        Integer.parseInt(horariosAini[0]);
-        int inicioM = Integer.parseInt(horariosAini[1]);
-
-        System.out.println("Ingresa la hora en que termina la clase, con el siguiente formato HH:MM");
-        String horarioAfin = scan.nextLine();
-        String[] horariosAfin =  horarioAfin.split(":");
-        int finH = Integer.parseInt(horariosAfin[0]);
-        int finM = Integer.parseInt(horariosAfin[1]);
+        int inicioH = getInt("Ingrese la hora en formato en que inicia la clase","Error ingrese un valor numrico");
+        int inicioM = getInt("Ingrese los minutos en que inicia la clase", "Error, ingrese un valor numerico");
+        int finH = getInt("Ingrese la hora en formato en que finaliza la clase","Error ingrese un valor numrico");
+        int finM = getInt("Ingrese los minutos en que finaliza la clase", "Error, ingrese un valor numerico");
         return new Trabajador.Horario(inicioH,inicioM,finH,finM);
     }
 
