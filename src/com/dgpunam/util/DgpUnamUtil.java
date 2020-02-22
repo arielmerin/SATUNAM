@@ -123,7 +123,7 @@ public class DgpUnamUtil {
         String direccion = scan.nextLine();
         System.out.println("La dirección ingresada fue: "+ direccion );
 
-        System.out.println("Ingresa el e-mail del(la) investigador(a): ");
+        System.out.println("Ingresa el e-mail del(la) trabajador(a): ");
         String correo = scan.nextLine();
         System.out.println("El correo ingresado fue: "+ correo );
 
