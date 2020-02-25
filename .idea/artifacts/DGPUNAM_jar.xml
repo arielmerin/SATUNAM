@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DGPUNAM:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DGPUNAM_jar</output-path>
+    <root id="archive" name="DGPUNAM.jar">
+      <element id="module-output" name="DGPUNAM" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/annotations/18.0.0/annotations-18.0.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
