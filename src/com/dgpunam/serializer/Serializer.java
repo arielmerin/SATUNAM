@@ -28,7 +28,7 @@ public class Serializer {
         }catch(NotSerializableException exc){
             System.out.println(exc);
         }catch(FileNotFoundException e){
-            System.out.println(e);
+            e.getMessage();
         }catch(IOException e){
             System.out.println(e);
         }finally{
@@ -59,11 +59,11 @@ public class Serializer {
         }catch(EOFException e){
             System.out.println("Fin del archivo");
         }catch(FileNotFoundException e){
-            System.out.println(e);
+            e.getMessage();
         }catch(IOException e){
             System.out.println(e);
         }catch(ClassNotFoundException e){
-            System.out.println(e);
+
         }finally{
             if(in == null){
                 System.out.println("Nuevo archivo creado");
