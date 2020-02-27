@@ -246,7 +246,7 @@ public class UImenu {
                 trabajadorArregloDinamico.agrega(adm, indice);
             }
         }else {
-            System.out.println("Ese trabajador no existe.");
+            System.out.println("Ese trabajador no existe.\nIntentelo de nuevo.");
         }
     }
 }
