@@ -234,6 +234,7 @@ public class Trabajador implements Serializable {
 
     /**
      * Permite imprimir el cheque del empleado en un formato adecuado
+     * @return Impresion del cheque con deducciones del empleado
      */
     public String cheque(){
         String salarioImpuestos = "\n \n" +
